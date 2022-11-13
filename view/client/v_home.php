@@ -3,10 +3,10 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="banner-content">
-                    <h1 class="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">Get <span class="color-secondary">2500+</span> <br>Best Online Courses From EduBlink</h1>
-                    <p data-sal-delay="200" data-sal="slide-up" data-sal-duration="1000">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p>
+                    <h1 class="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">Trải Nghiệm <span class="color-secondary">2500+</span> <br>Khoá Học Tốt Nhất Từ EduBlink</h1>
+                    <!-- <p data-sal-delay="200" data-sal="slide-up" data-sal-duration="1000">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p> -->
                     <div class="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
-                        <a href="course-one.html" class="edu-btn">Find courses <i class="icon-4"></i></a>
+                        <a href="course-one.html" class="edu-btn">Tìm khoá học <i class="icon-4"></i></a>
                     </div>
                     <ul class="shape-group">
                         <li class="shape-1 scene" data-sal-delay="1000" data-sal="fade" data-sal-duration="1000">
@@ -22,13 +22,13 @@
                     </div>
                     <div class="instructor-info" data-sal-delay="600" data-sal="slide-up" data-sal-duration="1000">
                         <div class="inner">
-                            <h5 class="title">Instrunctor</h5>
+                            <h5 class="title">Giảng Viên</h5>
                             <div class="media">
                                 <div class="thumb">
                                     <img src="view/assets/images/banner/author-1.png" alt="Images">
                                 </div>
                                 <div class="content">
-                                    <span>200+</span> Instactors
+                                    <span>200+</span> Giảng Viên
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                     <img class="svgInject" src="view/assets/images/animated-svg-icons/online-class.svg" alt="animated icon">
                 </div>
                 <div class="content">
-                    <h5 class="title"><span>3020</span> Online Courses</h5>
+                    <h5 class="title"><span>3020</span> Khoá Học Online</h5>
                 </div>
             </div>
             <div class="features-box features-style-2 edublink-svg-animate">
@@ -81,7 +81,7 @@
                     <img class="svgInject" src="view/assets/images/animated-svg-icons/instructor.svg" alt="animated icon">
                 </div>
                 <div class="content">
-                    <h5 class="title"><span>Top</span>Instructors</h5>
+                    <h5 class="title"><span>Top</span>Giảng Viên</h5>
                 </div>
             </div>
             <div class="features-box features-style-2 edublink-svg-animate">
@@ -89,7 +89,7 @@
                     <img class="svgInject" src="view/assets/images/animated-svg-icons/certificate.svg" alt="animated icon">
                 </div>
                 <div class="content">
-                    <h5 class="title"><span>Online</span>Certifications</h5>
+                    <h5 class="title"><span>Chứng Chỉ</span>Online</h5>
                 </div>
             </div>
             <div class="features-box features-style-2 edublink-svg-animate">
@@ -97,7 +97,7 @@
                     <img class="svgInject" src="view/assets/images/animated-svg-icons/user.svg" alt="animated icon">
                 </div>
                 <div class="content">
-                    <h5 class="title"><span>6000</span>Members</h5>
+                    <h5 class="title"><span>6000</span>Học Viên</h5>
                 </div>
             </div>
         </div>
@@ -111,9 +111,9 @@
 <div class="edu-categorie-area categorie-area-2 edu-section-gap">
     <div class="container">
         <div class="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-            <h2 class="title">Top Categories</h2>
+            <h2 class="title">Danh Mục Khoá Học</h2>
             <span class="shape-line"><i class="icon-19"></i></span>
-            <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore</p>
+            <!-- <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore</p> -->
         </div>
 
         <div class="row g-5">
@@ -287,15 +287,15 @@
             <div class="col-lg-6" data-sal-delay="150" data-sal="slide-left" data-sal-duration="800">
                 <div class="about-content">
                     <div class="section-title section-left">
-                        <span class="pre-title">About Us</span>
-                        <h2 class="title">Learn & Grow Your Skills From <span class="color-secondary">Anywhere</span></h2>
+                        <span class="pre-title">Về Chúng Tôi</span>
+                        <h2 class="title">Học Và Phát Triền Kĩ Năng <span class="color-secondary">Ở Bất Cứ Đâu</span></h2>
                         <span class="shape-line"><i class="icon-19"></i></span>
-                        <p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod ex tempor incididunt labore dolore magna aliquaenim minim veniam quis nostrud exercitation ullamco laboris.</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod ex tempor incididunt labore dolore magna aliquaenim minim veniam quis nostrud exercitation ullamco laboris.</p> -->
                     </div>
                     <ul class="features-list">
-                        <li>Expert Trainers</li>
-                        <li>Online Remote Learning</li>
-                        <li>Lifetime Access</li>
+                        <li>Giảng Viên Dày Dặn Kinh Nghiệm</li>
+                        <li>Học Hoàn Toàn Trực Tuyến</li>
+                        <li>Truy Cập Trọn Đời</li>
                     </ul>
                 </div>
             </div>
@@ -768,15 +768,15 @@
                 <div class="home-one-cta edu-cta-box bg-image">
                     <div class="inner">
                         <div class="content text-md-end">
-                            <span class="subtitle">Get In Touch:</span>
-                            <h3 class="title"><a href="mailto:info@edublink">info@edublink</a></h3>
+                            <span class="subtitle">Liên Lạc Qua:</span>
+                            <h3 class="title"><a href="mailto:giang03yn@gmail.com">giang03yn@gmail.com</a></h3>
                         </div>
                         <div class="sparator">
-                            <span>or</span>
+                            <span>hoặc</span>
                         </div>
                         <div class="content">
-                            <span class="subtitle">Call Us Via:</span>
-                            <h3 class="title"><a href="tel:+011235641231">+01 123 5641 231</a></h3>
+                            <span class="subtitle">Phone Number:</span>
+                            <h3 class="title"><a href="tel:+840971631797">+84 097 163 1797</a></h3>
                         </div>
                     </div>
                     <ul class="shape-group">
