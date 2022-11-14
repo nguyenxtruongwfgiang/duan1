@@ -112,23 +112,26 @@
     <div class="container">
         <div class="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
             <h2 class="title">Danh Mục Khoá Học</h2>
+            <?php var_dump($danh_sach_danh_muc) ?>
             <span class="shape-line"><i class="icon-19"></i></span>
             <!-- <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore</p> -->
         </div>
 
         <div class="row g-5">
-            <div class="col-lg-4 col-md-6" data-sal-delay="50" data-sal="slide-up" data-sal-duration="800">
-                <div class="categorie-grid categorie-style-2 color-primary-style edublink-svg-animate">
-                    <div class="icon">
-                        <i class="icon-9"></i>
-                    </div>
-                    <div class="content">
-                        <a href="course-one.html">
-                            <h5 class="title">Business Management</h5>
-                        </a>
+            <?php foreach ($danh_sach_danh_muc as $danh_muc) : ?>
+                <div class="col-lg-4 col-md-6" data-sal-delay="50" data-sal="slide-up" data-sal-duration="800">
+                    <div class="categorie-grid categorie-style-2 <?= $danh_muc['mau_nen'] ?> edublink-svg-animate">
+                        <div class="icon">
+                            <i class="<?= $danh_muc['icon'] ?>"></i>
+                        </div>
+                        <div class="content">
+                            <a href="course-one.html">
+                                <h5 class="title"><?= $danh_muc['ten_danhmuc'] ?></h5>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
 
             <div class="col-lg-4 col-md-6" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
                 <div class="categorie-grid categorie-style-2 color-secondary-style">
