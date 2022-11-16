@@ -8,7 +8,7 @@
             <div class="page-bar">
                 <div class="page-title-breadcrumb">
                     <div class=" pull-left">
-                        <div class="page-title">All Students List</div>
+                        <div class="page-title">Danh Sách Học Viên</div>
                     </div>
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
@@ -45,8 +45,8 @@
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6 col-6">
                                                         <div class="btn-group">
-                                                            <a href="add_professor.html" id="addRow" class="btn btn-primary">
-                                                                Add New <i class="fa fa-plus"></i>
+                                                            <a href="index.php?url=them_moi_hoc_vien" id="addRow" class="btn btn-primary">
+                                                                Thêm Mới <i class="fa fa-plus"></i>
                                                             </a>
                                                         </div>
                                                     </div>

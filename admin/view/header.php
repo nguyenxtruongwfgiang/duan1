@@ -11,7 +11,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta name="description" content="Responsive Admin Template" />
     <meta name="author" content="SmartUniversity" />
-    <title>Smart University | Bootstrap Responsive Admin Template</title>
+    <title>EduBlink | Admin</title>
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
     <!-- icons -->
@@ -34,11 +34,14 @@
     <link href="view/admin/assets/css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="view/admin/assets/css/theme/dark/theme-color.css" rel="stylesheet" type="text/css" />
 
+    <!-- data table -->
+    <link href="view/admin/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css">
+
     <link href="view/admin/assets/plugins/dropzone/dropzone.css" rel="stylesheet" media="screen">
     <!-- Date Time item CSS -->
     <link rel="stylesheet" href="view/admin/assets/plugins/flatpicker/css/flatpickr.min.css" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="https://www.einfosoft.com/templates/admin/smart/source/assets/img/favicon.ico" />
+    <link rel="shortcut icon" href="view/admin/assets/img/favicon.png" />
 </head>
 <!-- END HEAD -->
 
@@ -50,14 +53,15 @@
                 <!-- logo start -->
                 <div class="page-logo">
                     <a href="index.html">
-                        <span class="logo-icon material-icons fa-rotate-45">school</span>
-                        <span class="logo-default">Smart</span> </a>
+                        <!-- <span class="logo-icon material-icons fa-rotate-45">school</span> -->
+                        <span class="logo-default"><img src="view/admin/assets/logo/logo-white.png" alt=""></span>
+                    </a>
                 </div>
                 <!-- logo end -->
                 <ul class="nav navbar-nav navbar-left in">
                     <li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
                 </ul>
-                <form class="search-form-opened" action="#" method="GET">
+                <!-- <form class="search-form-opened" action="#" method="GET">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search..." name="query">
                         <span class="input-group-btn">
@@ -66,7 +70,7 @@
                             </a>
                         </span>
                     </div>
-                </form>
+                </form> -->
                 <!-- start mobile menu -->
                 <a class="menu-toggler responsive-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
                     <span></span>

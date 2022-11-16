@@ -133,7 +133,7 @@
                 </div>
             <?php endforeach; ?>
 
-            <div class="col-lg-4 col-md-6" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
+            <!-- <div class="col-lg-4 col-md-6" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
                 <div class="categorie-grid categorie-style-2 color-secondary-style">
                     <div class="icon">
                         <i class="icon-10 art-design"></i>
@@ -235,7 +235,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

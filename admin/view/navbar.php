@@ -20,124 +20,74 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
-                        <span class="title">Students</span><span class="arrow"></span></a>
+                        <span class="title">Học Viên</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="all_students.html" class="nav-link "> <span class="title">All
-                                    Students</span>
+                            <a href="index.php?url=hoc_vien" class="nav-link "> <span class="title">
+                                    Học Viên</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="add_student.html" class="nav-link "> <span class="title">Add
-                                    Student</span>
+                            <a href="index.php?url=them_moi_hoc_vien" class="nav-link "> <span class="title">
+                                    Thêm Mới Học Viên</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="add_student_bootstrap.html" class="nav-link "> <span class="title">Add
-                                    Student Bootstrap</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="edit_student.html" class="nav-link "> <span class="title">Edit
-                                    Student</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="student_profile.html" class="nav-link "> <span class="title">About
-                                    Student</span>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link nav-toggle"> <i data-feather="user"></i>
-                        <span class="title">Professors</span> <span class="arrow"></span>
+                        <span class="title">Giảng Viên</span> <span class="arrow"></span>
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="all_professors.html" class="nav-link "> <span class="title">All
-                                    Professors</span>
+                            <a href="all_professors.html" class="nav-link "> <span class="title">
+                                    Danh Sách Giảng Viên</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="add_professor.html" class="nav-link "> <span class="title">Add
-                                    Professor</span>
+                            <a href="add_professor.html" class="nav-link "> <span class="title">
+                                    Thêm Mới Giảng Viên</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="add_professor_bootstrap.html" class="nav-link "> <span class="title">Add Professor Bootstrap</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="edit_professor.html" class="nav-link "> <span class="title">Edit
-                                    Professor</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="professor_profile.html" class="nav-link "> <span class="title">About
-                                    Professor</span>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link nav-toggle"> <i data-feather="book"></i>
-                        <span class="title">Courses</span> <span class="arrow"></span>
+                        <span class="title">Khoá Học</span> <span class="arrow"></span>
                         <span class="label label-rouded label-menu label-success">new</span>
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="all_courses.html" class="nav-link "> <span class="title">All
-                                    Courses</span>
+                            <a href="all_courses.html" class="nav-link "> <span class="title">
+                                    Danh Sách Khoá Học</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="add_course.html" class="nav-link "> <span class="title">Add
-                                    Course</span>
+                            <a href="add_course.html" class="nav-link "> <span class="title">
+                                    Thêm Khoá Học</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="add_course_bootstrap.html" class="nav-link "> <span class="title">Add
-                                    Course Bootstrap</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="edit_course.html" class="nav-link "> <span class="title">Edit
-                                    Course</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="course_details.html" class="nav-link "> <span class="title">About
-                                    Course</span>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link nav-toggle"> <i data-feather="book-open"></i>
-                        <span class="title">Library</span> <span class="arrow"></span>
+                    <a href="index.php?url=danh_sach_danh_muc" class="nav-link nav-toggle"> <i data-feather="book-open"></i>
+                        <span class="title">Danh Mục</span> <span class="arrow"></span>
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="all_assets.html" class="nav-link "> <span class="title">All Library
-                                    Assets</span>
+                            <a href="index.php?url=danh_sach_danh_muc" class="nav-link "> <span class="title">
+                                    Danh Sách Danh Mục</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="add_library.html" class="nav-link "> <span class="title">Add Library
-                                    Asset</span>
+                            <a href="index.php?url=them_danh_muc" class="nav-link "> <span class="title">
+                                    Thêm Danh Mục</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="add_library_bootstrap.html" class="nav-link "> <span class="title">Add
-                                    Asset Bootstrap</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="edit_library.html" class="nav-link "> <span class="title">Edit
-                                    Asset</span>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
                 
