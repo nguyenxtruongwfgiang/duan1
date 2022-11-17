@@ -1,5 +1,5 @@
 <?php
-function danh_sach_khoa_hoc(){
+function hien_thi_ds_khoa_hoc(){
     
 }
 ?>

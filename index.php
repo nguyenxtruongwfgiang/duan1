@@ -13,7 +13,7 @@ switch ($url){
         hien_thi_trang_chu();
         break;
     case 'khoa_hoc':
-        danh_sach_khoa_hoc();
+        hien_thi_ds_khoa_hoc();
         break;
 
 }

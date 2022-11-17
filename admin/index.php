@@ -3,6 +3,8 @@ include('view/header.php');
 include('controllers/c_student.php');
 include('controllers/c_dashboard.php');
 include('controllers/c_category.php');
+include('controllers/c_course.php');
+
 
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
 switch ($url) {
@@ -16,6 +18,7 @@ switch ($url) {
         them_moi_hoc_vien();
         break;
 
+    // danh mục
     case 'danh_sach_danh_muc':
         hien_thi_ds_danhMuc();
         break;
@@ -32,6 +35,17 @@ switch ($url) {
 
     case 'sua_danh_muc':
         sua_danh_muc();
+        break;
+
+    //end danh mục
+    case 'danh_sach_khoa_hoc':
+        get_courses();
+        break;
+    case 'them_khoa_hoc':
+        them_moi_khoa_hoc();
+        break;
+    case 'xoa_khoa_hoc':
+        xoa_khoa_hoc();
         break;
 }
 

@@ -319,276 +319,82 @@
         <div class="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
             <span class="pre-title">Popular Courses</span>
             <h2 class="title">Pick A Course To Get Started</h2>
+            <?php var_dump($danh_sach_khoa_hoc) ?>
             <span class="shape-line"><i class="icon-19"></i></span>
         </div>
         <div class="row g-5">
-            <!-- Start Single Course  -->
-            <div class="col-md-6 col-xl-3" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-course course-style-1 hover-button-bg-white">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="course-details.html">
-                                <img src="view/assets/images/course/course-07.jpg" alt="Course Meta">
-                            </a>
-                            <div class="time-top">
-                                <span class="duration"><i class="icon-61"></i>4 Weeks</span>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <span class="course-level">Advanced</span>
-                            <h6 class="title">
-                                <a href="#">Starting SEO as your Home Based Business</a>
-                            </h6>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
+            <?php foreach ($danh_sach_khoa_hoc as $khoa_hoc) : ?>
+                <!-- Start Single Course  -->
+                <div class="col-md-6 col-xl-3" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                    <div class="edu-course course-style-1 hover-button-bg-white">
+                        <div class="inner">
+                            <div class="thumbnail">
+                                <a href="course-details.html">
+                                    <img src="public/image/course/<?= $khoa_hoc['hinh'] ?>" alt="Course Meta">
+                                </a>
+                                <div class="time-top">
+                                    <span class="duration"><i class="icon-61"></i><?= $khoa_hoc['thoi_gian'] ?> Tuần</span>
                                 </div>
-                                <span class="rating-count">(4.9 /8 Rating)</span>
                             </div>
-                            <div class="course-price">$49.00</div>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>13 Lessons</li>
-                                <li><i class="icon-25"></i>28 Students</li>
-                            </ul>
+                            <div class="content">
+                                <span class="course-level"><?= $khoa_hoc['level'] ?></span>
+                                <h6 class="title">
+                                    <a href="#"><?= $khoa_hoc['ten_khoa_hoc'] ?></a>
+                                </h6>
+                                <div class="course-rating">
+                                    <div class="rating">
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                    </div>
+                                    <span class="rating-count">(4.9 /8 Rating)</span>
+                                </div>
+                                <div class="course-price"><?= number_format($khoa_hoc['hoc_phi']) ?>đ</div>
+                                <ul class="course-meta">
+                                    <li><i class="icon-24"></i><?= $khoa_hoc['thoi_gian'] ?> Tuần</li>
+                                    <li><i class="icon-25"></i>28 Students</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="course-hover-content-wrapper">
-                        <button class="wishlist-btn"><i class="icon-22"></i></button>
-                    </div>
-                    <div class="course-hover-content">
-                        <div class="content">
+                        <div class="course-hover-content-wrapper">
                             <button class="wishlist-btn"><i class="icon-22"></i></button>
-                            <span class="course-level">Advanced</span>
-                            <h6 class="title">
-                                <a href="course-details.html">Starting SEO as your Home Based Business</a>
-                            </h6>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
+                        </div>
+                        <div class="course-hover-content">
+                            <div class="content">
+                                <button class="wishlist-btn"><i class="icon-22"></i></button>
+                                <span class="course-level"><?= $khoa_hoc['level'] ?></span>
+                                <h6 class="title">
+                                    <a href="index.php?url=chi_tiet_khoa_hoc&ma_khoa_hoc=<?= $khoa_hoc['ma_khoa_hoc'] ?>"><?= $khoa_hoc['ten_khoa_hoc'] ?></a>
+                                </h6>
+                                <div class="course-rating">
+                                    <div class="rating">
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                    </div>
+                                    <span class="rating-count">(4.9 /8 Rating)</span>
                                 </div>
-                                <span class="rating-count">(4.9 /8 Rating)</span>
+                                <div class="course-price"><?= number_format($khoa_hoc['hoc_phi']) ?>đ</div>
+                                <p><?= $khoa_hoc['thong_tin_khoa_hoc'] ?></p>
+                                <ul class="course-meta">
+                                    <li><i class="icon-24"></i><?= $khoa_hoc['thoi_gian'] ?> Tuần</li>
+                                    <li><i class="icon-25"></i>28 Students</li>
+                                </ul>
+                                <a href="index.php?url=chi_tiet_khoa_hoc&ma_khoa_hoc=<?= $khoa_hoc['ma_khoa_hoc'] ?>" class="edu-btn btn-secondary btn-small">Xem Chi Tiết <i class="icon-4"></i></a>
                             </div>
-                            <div class="course-price">$49.00</div>
-                            <p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor.</p>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>13 Lessons</li>
-                                <li><i class="icon-25"></i>28 Students</li>
-                            </ul>
-                            <a href="course-details.html" class="edu-btn btn-secondary btn-small">Enrolled <i class="icon-4"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- End Single Course  -->
-            <!-- Start Single Course  -->
-            <div class="col-md-6 col-xl-3" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-course course-style-1 hover-button-bg-white">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="course-details.html">
-                                <img src="view/assets/images/course/course-04.jpg" alt="Course Meta">
-                            </a>
-                            <div class="time-top">
-                                <span class="duration"><i class="icon-61"></i>3 Weeks</span>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <span class="course-level">Beginner</span>
-                            <h6 class="title">
-                                <a href="#">Java Programming Masterclass for Software Developers</a>
-                            </h6>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(5.0 /7 Rating)</span>
-                            </div>
-                            <div class="course-price">$29.00</div>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>8 Lessons</li>
-                                <li><i class="icon-25"></i>20 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="course-hover-content-wrapper">
-                        <button class="wishlist-btn"><i class="icon-22"></i></button>
-                    </div>
-                    <div class="course-hover-content">
-                        <div class="content">
-                            <button class="wishlist-btn"><i class="icon-22"></i></button>
-                            <span class="course-level">Beginner</span>
-                            <h6 class="title">
-                                <a href="course-details.html">Java Programming Masterclass for Software Developers</a>
-                            </h6>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(5.0 /7 Rating)</span>
-                            </div>
-                            <div class="course-price">$29.00</div>
-                            <p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor.</p>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>8 Lessons</li>
-                                <li><i class="icon-25"></i>20 Students</li>
-                            </ul>
-                            <a href="course-details.html" class="edu-btn btn-secondary btn-small">Enrolled <i class="icon-4"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Course  -->
-            <!-- Start Single Course  -->
-            <div class="col-md-6 col-xl-3" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-course course-style-1 hover-button-bg-white">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="course-details.html">
-                                <img src="view/assets/images/course/course-05.jpg" alt="Course Meta">
-                            </a>
-                            <div class="time-top">
-                                <span class="duration"><i class="icon-61"></i>8 Weeks</span>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <span class="course-level">Advanced</span>
-                            <h6 class="title">
-                                <a href="#">Building A Better World One Student At A Time</a>
-                            </h6>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(4.8 /9 Rating)</span>
-                            </div>
-                            <div class="course-price">$35.00</div>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>32 Lessons</li>
-                                <li><i class="icon-25"></i>18 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="course-hover-content-wrapper">
-                        <button class="wishlist-btn"><i class="icon-22"></i></button>
-                    </div>
-                    <div class="course-hover-content">
-                        <div class="content">
-                            <button class="wishlist-btn"><i class="icon-22"></i></button>
-                            <span class="course-level">Advanced</span>
-                            <h6 class="title">
-                                <a href="course-details.html">Building A Better World One Student At A Time</a>
-                            </h6>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(4.8 /9 Rating)</span>
-                            </div>
-                            <div class="course-price">$29.00</div>
-                            <p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor.</p>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>35 Lessons</li>
-                                <li><i class="icon-25"></i>18 Students</li>
-                            </ul>
-                            <a href="course-details.html" class="edu-btn btn-secondary btn-small">Enrolled <i class="icon-4"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Course  -->
-            <!-- Start Single Course  -->
-            <div class="col-md-6 col-xl-3" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-course course-style-1 hover-button-bg-white">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="course-details.html">
-                                <img src="view/assets/images/course/course-06.jpg" alt="Course Meta">
-                            </a>
-                            <div class="time-top">
-                                <span class="duration"><i class="icon-61"></i>6 Weeks</span>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <span class="course-level">Intermediate</span>
-                            <h6 class="title">
-                                <a href="#">Master Your Personal Brand Like a Marketing Pro</a>
-                            </h6>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(4.7 /5 Rating)</span>
-                            </div>
-                            <div class="course-price">$49.00</div>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>15 Lessons</li>
-                                <li><i class="icon-25"></i>12 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="course-hover-content-wrapper">
-                        <button class="wishlist-btn"><i class="icon-22"></i></button>
-                    </div>
-                    <div class="course-hover-content">
-                        <div class="content">
-                            <button class="wishlist-btn"><i class="icon-22"></i></button>
-                            <span class="course-level">Intermediate</span>
-                            <h6 class="title">
-                                <a href="course-details.html">Master Your Personal Brand Like a Marketing Pro</a>
-                            </h6>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(4.7 /5 Rating)</span>
-                            </div>
-                            <div class="course-price">$49.00</div>
-                            <p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor.</p>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>15 Lessons</li>
-                                <li><i class="icon-25"></i>12 Students</li>
-                            </ul>
-                            <a href="course-details.html" class="edu-btn btn-secondary btn-small">Enrolled <i class="icon-4"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Course  -->
+                <!-- End Single Course  -->
+            <?php endforeach; ?>
+            
         </div>
         <div class="course-view-all" data-sal-delay="150" data-sal="slide-up" data-sal-duration="1200">
-            <a href="course-one.html" class="edu-btn">Browse more courses <i class="icon-4"></i></a>
+            <a href="index.php?url=khoa_hoc" class="edu-btn">Browse more courses <i class="icon-4"></i></a>
         </div>
     </div>
 </div>

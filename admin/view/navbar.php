@@ -60,12 +60,12 @@
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="all_courses.html" class="nav-link "> <span class="title">
+                            <a href="index.php?url=danh_sach_khoa_hoc" class="nav-link "> <span class="title">
                                     Danh Sách Khoá Học</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="add_course.html" class="nav-link "> <span class="title">
+                            <a href="index.php?url=them_khoa_hoc" class="nav-link "> <span class="title">
                                     Thêm Khoá Học</span>
                             </a>
                         </li>
