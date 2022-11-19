@@ -47,6 +47,12 @@ switch ($url) {
     case 'xoa_khoa_hoc':
         xoa_khoa_hoc();
         break;
+    case 'form_sua_khoa_hoc':
+        form_sua_khoa_hoc();
+        break;
+    case 'edit_course':
+        edit_course();
+        break;
 }
 
 include('view/footer.php');

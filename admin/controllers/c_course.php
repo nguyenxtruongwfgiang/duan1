@@ -19,3 +19,15 @@ function xoa_khoa_hoc(){
         xoa_khoa_hoc_theo_id($ma_khoa_hoc);
     }
 }
+
+function form_sua_khoa_hoc(){
+    if(isset($_GET['course_id'])){
+        $course_id = $_GET['course_id'];
+        $course = get_coure_by_id($course_id);
+    }
+    include('view/course/edit_course.php');
+}
+
+function edit_course(){
+    m_edit_course();
+}

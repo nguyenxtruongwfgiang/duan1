@@ -9,6 +9,12 @@
             line-clamp: 2;
             -webkit-box-orient: vertical;
         }
+
+        /* td {
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+        } */
     </style>
 </head>
 <div class="page-container">
