@@ -41,12 +41,12 @@
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="all_professors.html" class="nav-link "> <span class="title">
+                            <a href="index.php?url=danh_sach_giang_vien" class="nav-link "> <span class="title">
                                     Danh Sách Giảng Viên</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="add_professor.html" class="nav-link "> <span class="title">
+                            <a href="index.php?url=them_giang_vien" class="nav-link "> <span class="title">
                                     Thêm Mới Giảng Viên</span>
                             </a>
                         </li>

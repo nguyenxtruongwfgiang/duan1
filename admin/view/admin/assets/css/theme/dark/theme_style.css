@@ -4601,11 +4601,12 @@ textarea.form-control-textarea {
 .form-group .input-inline {
   margin-right: 5px;
 }
-.patient-img img {
-  height: 30px;
-  width: 30px;
+/* .patient-img img {
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
-}
+  object-fit: cover;
+} */
 .form-material .form-control,
 .form-material .form-control.focus,
 .form-material .form-control:focus {

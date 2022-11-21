@@ -119,9 +119,6 @@ function m_edit_course()
             window.location.href='index.php?url=danh_sach_khoa_hoc';
                 </script>";
             $thong_bao = 'Sửa thành công';
-            echo "<script>
-            window.location.href='index.php?url=danh_sach_khoa_hoc';
-        </script>";
         }
     }
     // if (isset($thong_bao))  echo $thong_bao;

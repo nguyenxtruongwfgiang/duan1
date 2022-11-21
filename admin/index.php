@@ -4,6 +4,7 @@ include('controllers/c_student.php');
 include('controllers/c_dashboard.php');
 include('controllers/c_category.php');
 include('controllers/c_course.php');
+include('controllers/c_teacher.php');
 
 
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
@@ -52,6 +53,23 @@ switch ($url) {
         break;
     case 'edit_course':
         edit_course();
+        break;
+    //end course
+    //start teacher
+    case 'danh_sach_giang_vien':
+        hien_thi_danh_sach_giang_vien();
+        break;
+    case 'them_giang_vien':
+        them_giang_vien();
+        break;
+    case 'xoa_giang_vien':
+        xoa_giang_vien();
+        break;
+    case 'form_sua_giang_vien':
+        edit_teacher_form();
+        break;
+    case 'sua_giang_vien':
+        edit_teacher();
         break;
 }
 
