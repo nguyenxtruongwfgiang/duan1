@@ -23,11 +23,20 @@ function xoa_khoa_hoc(){
 function form_sua_khoa_hoc(){
     if(isset($_GET['course_id'])){
         $course_id = $_GET['course_id'];
-        $course = get_coure_by_id($course_id);
+        $course = lay_khoa_hoc_theo_id($course_id);
     }
     include('view/course/edit_course.php');
 }
 
 function edit_course(){
     m_edit_course();
+}
+
+function thong_ke_khoa_hoc(){
+    $danh_sach_thong_ke = danh_sach_thong_ke();
+    include('view/chart/thong_ke.php');
+}
+
+function bieu_do_thong_ke(){
+    
 }

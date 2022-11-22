@@ -14,9 +14,13 @@
 <script src="view/admin/assets/plugins/jquery-blockui/jquery.blockui.min.js"></script>
 <script src="view/admin/assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 <script src="view/admin/assets/plugins/feather/feather.min.js"></script>
+<script src="view/admin/assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+<script src="view/admin/assets/plugins/jquery-validation/js/additional-methods.min.js"></script>
 <!-- bootstrap -->
 <script src="view/admin/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="view/admin/assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="view/admin/assets/plugins/flatpicker/js/flatpicker.min.js"></script>
+<script src="view/admin/assets/js/pages/date-time/date-time.init.js"></script>
 <!-- data tables -->
 <script src="view/admin/assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="view/admin/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap5.min.js"></script>
@@ -24,6 +28,7 @@
 <!-- Common js-->
 <script src="view/admin/assets/js/app.js"></script>
 <script src="view/admin/assets/js/layout.js"></script>
+<script src="view/admin/assets/js/pages/validation/form-validation.js"></script>
 <script src="view/admin/assets/js/theme-color.js"></script>
 <!-- Material -->
 <script src="view/admin/assets/plugins/material/material.min.js"></script>

@@ -22,6 +22,7 @@
     <!--bootstrap -->
     <link href="view/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="view/admin/assets/plugins/summernote/summernote.css" rel="stylesheet">
+    <link rel="stylesheet" href="view/admin/assets/plugins/flatpicker/css/flatpickr.min.css" />
     <!-- Material Design Lite CSS -->
     <link rel="stylesheet" href="view/admin/assets/plugins/material/material.min.css">
     <link rel="stylesheet" href="view/admin/assets/css/material_style.css">

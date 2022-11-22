@@ -366,7 +366,7 @@
                                 <button class="wishlist-btn"><i class="icon-22"></i></button>
                                 <span class="course-level"><?= $khoa_hoc['level'] ?></span>
                                 <h6 class="title">
-                                    <a href="index.php?url=chi_tiet_khoa_hoc&ma_khoa_hoc=<?= $khoa_hoc['ma_khoa_hoc'] ?>"><?= $khoa_hoc['ten_khoa_hoc'] ?></a>
+                                    <a href="index.php?url=course_detail&course_id=<?= $khoa_hoc['ma_khoa_hoc'] ?>"><?= $khoa_hoc['ten_khoa_hoc'] ?></a>
                                 </h6>
                                 <div class="course-rating">
                                     <div class="rating">
@@ -384,7 +384,7 @@
                                     <li><i class="icon-24"></i><?= $khoa_hoc['thoi_gian'] ?> Tuần</li>
                                     <li><i class="icon-25"></i>28 Students</li>
                                 </ul>
-                                <a href="index.php?url=chi_tiet_khoa_hoc&ma_khoa_hoc=<?= $khoa_hoc['ma_khoa_hoc'] ?>" class="edu-btn btn-secondary btn-small">Xem Chi Tiết <i class="icon-4"></i></a>
+                                <a href="index.php?url=course_detail&course_id=<?= $khoa_hoc['ma_khoa_hoc'] ?>" class="edu-btn btn-secondary btn-small">Xem Chi Tiết <i class="icon-4"></i></a>
                             </div>
                         </div>
                     </div>

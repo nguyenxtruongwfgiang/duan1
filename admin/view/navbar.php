@@ -32,7 +32,7 @@
                                     Thêm Mới Học Viên</span>
                             </a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -50,7 +50,7 @@
                                     Thêm Mới Giảng Viên</span>
                             </a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -69,7 +69,7 @@
                                     Thêm Khoá Học</span>
                             </a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -87,50 +87,47 @@
                                     Thêm Danh Mục</span>
                             </a>
                         </li>
-                        
+
                     </ul>
                 </li>
-                
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-toggle"> <i data-feather="briefcase"></i>
+                        <span class="title">Lớp</span> <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="index.php?url=all_classes" class="nav-link "> <span class="title">
+                                    Danh Sách Lớp</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.php?url=add_class" class="nav-link "> <span class="title">
+                                    Đăng Ký Lớp</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="nav-item">
                     <a href="javascript:;" class="nav-link nav-toggle">
                         <i data-feather="pie-chart"></i>
-                        <span class="title">Charts</span>
+                        <span class="title">Thống Kê</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="charts_apexchart.html" class="nav-link ">
-                                <span class="title">Apex chart</span>
+                            <a href="index.php?url=thong_ke_sp" class="nav-link ">
+                                <span class="title">Thống Kê Sản Phẩm</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="charts_amchart.html" class="nav-link ">
-                                <span class="title">amChart</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="charts_plotly.html" class="nav-link ">
-                                <span class="title">Plotly Charts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="charts_echarts.html" class="nav-link ">
-                                <span class="title">eCharts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="charts_morris.html" class="nav-link ">
-                                <span class="title">Morris Charts</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="charts_chartjs.html" class="nav-link ">
-                                <span class="title">Chartjs</span>
+                                <span class="title">Biểu Đồ</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                
+
             </ul>
         </div>
     </div>
