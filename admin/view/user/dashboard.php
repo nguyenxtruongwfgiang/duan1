@@ -69,13 +69,13 @@
                                                                 <td><a href="mailto:<?= $user['email'] ?>">
                                                                         <?= $user['email'] ?> </a></td>
                                                                 <td class="patient-img">
-                                                                    <img src="view/admin/assets/img/user/user1.jpg" alt="">
+                                                                    <img src="../public/image/user/<?= $user['hinh'] ?>" alt="">
                                                                 </td>
                                                                 <td>
-                                                                    <a href="edit_professor.html" class="tblEditBtn">
+                                                                    <a href="index.php?url=form_sua_nguoi_dung&ma_nguoi_dung=<?= $user['ma_nguoi_dung'] ?>" class="tblEditBtn">
                                                                         <i class="fa fa-pencil"></i>
                                                                     </a>
-                                                                    <a class="tblDelBtn">
+                                                                    <a class="tblDelBtn" href="index.php?url=xoa_nguoi_dung&ma_nguoi_dung=<?= $user['ma_nguoi_dung'] ?>">
                                                                         <i class="fa fa-trash-o"></i>
                                                                     </a>
                                                                 </td>

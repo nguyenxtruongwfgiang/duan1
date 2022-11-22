@@ -33,6 +33,9 @@
 <!-- Material -->
 <script src="view/admin/assets/plugins/material/material.min.js"></script>
 <!-- end js include path -->
+<script src="view/admin/assets/plugins/chart-js/Chart.min.js"></script>
+<script src="view/admin/assets/plugins/chart-js/utils.js"></script>
+<script src="view/admin/assets/js/pages/chart/chartjs/chartjs-data.js"></script>
 </body>
 
 

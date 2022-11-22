@@ -121,7 +121,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="charts_amchart.html" class="nav-link ">
+                            <a href="index.php?url=bieu_do_thong_ke" class="nav-link ">
                                 <span class="title">Biểu Đồ</span>
                             </a>
                         </li>

@@ -95,6 +95,12 @@ switch ($url) {
     case 'bieu_do_thong_ke':
         bieu_do_thong_ke();
         break;
+    case 'xoa_nguoi_dung':
+        xoa_nguoi_dung();
+        break;
+    case 'form_sua_nguoi_dung':
+        form_sua_nguoi_dung();
+        break;
 }
 
 include('view/footer.php');
