@@ -27,11 +27,11 @@
                                     Học Viên</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="index.php?url=them_moi_hoc_vien" class="nav-link "> <span class="title">
                                     Thêm Mới Học Viên</span>
                             </a>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </li>

@@ -42,7 +42,7 @@
                                                 </div>
                                             </div>
                                             <div class="card-body ">
-                                                <div class="row">
+                                                <!-- <div class="row">
                                                     <div class="col-md-6 col-sm-6 col-6">
                                                         <div class="btn-group">
                                                             <a href="index.php?url=them_moi_hoc_vien" id="addRow" class="btn btn-primary">
@@ -50,7 +50,7 @@
                                                             </a>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <table class="table table-striped table-bordered table-hover table-checkable order-column valign-middle" id="example4">
                                                     <thead>
                                                         <tr>
