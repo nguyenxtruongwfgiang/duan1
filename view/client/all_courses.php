@@ -8,29 +8,15 @@
                             <h5 class="widget-title widget-toggle">Categories</h5>
                             <div class="content">
                                 <div class="edu-form-check">
-                                    <input type="checkbox" id="cat-check1" checked>
-                                    <label for="cat-check1">Art &amp; Design <span>(7)</span></label>
+                                    <a href="index.php?url=all_courses">Tất Cả</a>
                                 </div>
-                                <div class="edu-form-check">
-                                    <input type="checkbox" id="cat-check2">
-                                    <label for="cat-check2">Development <span>(2)</span></label>
-                                </div>
-                                <div class="edu-form-check">
-                                    <input type="checkbox" id="cat-check3">
-                                    <label for="cat-check3">Business <span>(3)</span></label>
-                                </div>
-                                <div class="edu-form-check">
-                                    <input type="checkbox" id="cat-check4">
-                                    <label for="cat-check4">Marketing <span>(6)</span></label>
-                                </div>
-                                <div class="edu-form-check">
-                                    <input type="checkbox" id="cat-check5">
-                                    <label for="cat-check5">Academics <span>(2)</span></label>
-                                </div>
-                                <div class="edu-form-check">
-                                    <input type="checkbox" id="cat-check6">
-                                    <label for="cat-check6">Data Science <span>(9)</span></label>
-                                </div>
+                                <?php foreach (danh_sach_danh_muc() as $category) : ?>
+                                    <div class="edu-form-check">
+                                        <!-- <input type="checkbox" id="cat-check1" checked> -->
+                                        <!-- <label for="cat-check1">Art &amp; Design <span>(7)</span></label> -->
+                                        <a href="index.php?url=all_courses&category_id=<?= $category['ma_danhmuc'] ?>"><?= $category['ten_danhmuc'] ?></a>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
