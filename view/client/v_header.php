@@ -68,10 +68,21 @@
                         </div>
                         <div class="header-top-right">
                             <ul class="header-info">
-                                <li><a href="#">Đăng nhập</a></li>
-                                <li><a href="#">Đăng ký</a></li>
-                                <li><a href="tel:+011235641231"><i class="icon-phone"></i>Call: 097 163 1797</a></li>
-                                <li><a href="mailto:giang03yn@gmail.com" target="_blank"><i class="icon-envelope"></i>Email: giang03yn@gmail.com</a></li>
+                                <?php if (isset($_SESSION['user'])) {
+                                    extract($_SESSION['user'])
+                                ?>
+                                    <li>Xin Chào: <a href=""><?= $ho_ten ?></a></li>
+                                    <?php if ($quyen == 1) { ?>
+                                        <li><a href="admin" target="blank">Đến Trang Quản Trị</a></li>
+                                    <?php } ?>
+                                    <li><a href="index.php?url=logout">Đăng Xuất</a></li>
+                                <?php } else { ?>
+                                    <li><a href="index.php?url=login">Đăng nhập</a></li>
+                                    <li><a href="index.php?url=register">Đăng ký</a></li>
+
+                                    <li><a href="tel:+011235641231"><i class="icon-phone"></i>Call: 097 163 1797</a></li>
+                                    <li><a href="mailto:giang03yn@gmail.com" target="_blank"><i class="icon-envelope"></i>Email: giang03yn@gmail.com</a></li>
+                                <?php } ?>
                                 <li class="social-icon">
                                     <a href="#"><i class="icon-facebook"></i></a>
                                     <a href="#"><i class="icon-instagram"></i></a>
@@ -120,74 +131,14 @@
                             <nav class="mainmenu-nav">
                                 <ul class="mainmenu">
                                     <li class="has-droupdown"><a href="index.php?url=trang_chu">Trang chủ</a>
-                                        <ul class="submenu">
-                                            <li><a href="index.php?url=trang_chu">EduBlink Education <span class="badge-1">hot</span></a></li>
-                                            <li><a href="index-distant-learning.html">Distant Learning</a></li>
-                                            <li><a href="index-university.html">University</a></li>
-                                            <li><a href="index-online-academy.html">Online Academy</a></li>
-                                            <li><a href="index-modern-schooling.html">Modern Schooling <span class="badge">new</span></a></li>
-                                            <li><a href="index-kitchen.html">Kitchen Coach</a></li>
-                                            <li><a href="index-yoga.html">Yoga Instructor</a></li>
-                                            <li><a href="index-kindergarten.html">Kindergarten</a></li>
-                                            <li><a href="index-health-coach.html">Health Coch <span class="badge">new</span></a></li>
-                                            <li><a href="index-landing.html">Landing Demo</a></li>
-                                        </ul>
                                     </li>
-                                    <!-- <li class="has-droupdown"><a href="#">Pages</a>
-                                        <ul class="mega-menu">
-                                            <li>
-                                                <h6 class="menu-title">Inner Pages</h6>
-                                                <ul class="submenu mega-sub-menu-01">
-                                                    <li><a href="about-one.html">About Us 1</a></li>
-                                                    <li><a href="about-two.html">About Us 2</a></li>
-                                                    <li><a href="about-three.html">About Us 3</a></li>
-                                                    <li><a href="team-one.html">Instructor 1</a></li>
-                                                    <li><a href="team-two.html">Instructor 2</a></li>
-                                                    <li><a href="team-three.html">Instructor 3</a></li>
-                                                    <li><a href="team-details.html">Instructor Profile</a></li>
-                                                    <li><a href="faq.html">Faq's</a></li>
-                                                    <li><a href="404.html">404 Error</a></li>
-                                                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <h6 class="menu-title">Inner Pages</h6>
-                                                <ul class="submenu mega-sub-menu-01">
-                                                    <li><a href="gallery-grid.html">Gallery Grid</a></li>
-                                                    <li><a href="gallery-masonry.html">Gallery Masonry</a></li>
-                                                    <li><a href="event-grid.html">Event Grid</a></li>
-                                                    <li><a href="event-list.html">Event List</a></li>
-                                                    <li><a href="event-details.html">Event Details</a></li>
-                                                    <li><a href="pricing-table.html">Pricing Table</a></li>
-                                                    <li><a href="purchase-guide.html">Purchase Guide</a></li>
-                                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                                    <li><a href="terms-condition.html">Terms & Condition</a></li>
-                                                    <li><a href="my-account.html">Sign In</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <h6 class="menu-title">Shop Pages</h6>
-                                                <ul class="submenu mega-sub-menu-01">
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="product-details.html">Product Details</a></li>
-                                                    <li><a href="cart.html">Cart</a></li>
-                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li> -->
 
                                     <li class="has-droupdown"><a href="#">Khoá học</a>
                                         <ul class="submenu">
-                                            <li><a href="course-one.html">Course Style 1</a></li>
-                                            <li><a href="course-two.html">Course Style 2</a></li>
-                                            <li><a href="course-three.html">Course Style 3</a></li>
-                                            <li><a href="course-four.html">Course Style 4</a></li>
-                                            <li><a href="course-five.html">Course Style 5</a></li>
-                                            <li><a href="course-details.html">Course Details 1</a></li>
-                                            <li><a href="course-details-2.html">Course Details 2</a></li>
-                                            <li><a href="course-details-3.html">Course Details 3</a></li>
+                                            <?php foreach (danh_sach_danh_muc() as $category) : ?>
+                                                <li><a href="index.php?url=all_courses&category_id=<?= $category['ma_danhmuc'] ?>"><?= $category['ten_danhmuc'] ?></a></li>
+                                            <?php endforeach; ?>
+
                                         </ul>
                                     </li>
 
