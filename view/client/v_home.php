@@ -112,7 +112,7 @@
     <div class="container">
         <div class="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
             <h2 class="title">Danh Mục Khoá Học</h2>
-            <?php var_dump($danh_sach_danh_muc) ?>
+            
             <span class="shape-line"><i class="icon-19"></i></span>
             <!-- <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore</p> -->
         </div>
@@ -319,7 +319,6 @@
         <div class="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
             <span class="pre-title">Popular Courses</span>
             <h2 class="title">Pick A Course To Get Started</h2>
-            <?php var_dump($danh_sach_khoa_hoc) ?>
             <span class="shape-line"><i class="icon-19"></i></span>
         </div>
         <div class="row g-5">
@@ -394,7 +393,7 @@
             
         </div>
         <div class="course-view-all" data-sal-delay="150" data-sal="slide-up" data-sal-duration="1200">
-            <a href="index.php?url=khoa_hoc" class="edu-btn">Browse more courses <i class="icon-4"></i></a>
+            <a href="index.php?url=all_courses" class="edu-btn">Browse more courses <i class="icon-4"></i></a>
         </div>
     </div>
 </div>

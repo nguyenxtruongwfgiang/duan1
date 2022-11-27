@@ -1,26 +1,26 @@
 <section class="checkout-page-area section-gap-equal">
     <div class="container">
-        <form>
+        <form action="index.php?url=complete_order" method="POST" enctype="multipart/form-data">
             <div class="checkout-notice">
                 <div class="coupn-box">
-                    <h6 class="toggle-bar"> Have a coupon?
-                        <a href="javascript:void(0)" class="toggle-btn">Click here to enter your code</a>
+                    <h6 class="toggle-bar"> Có mã giảm giá?
+                        <a href="javascript:void(0)" class="toggle-btn">Nhấn vào đây để nhập mã</a>
                     </h6>
                     <div class="toggle-open">
-                        <p>If you have a coupon code, please apply it below.</p>
+                        <p>Nhập mã giảm giá vào ô dưới đây.</p>
                         <div class="input-group">
-                            <input placeholder="Enter coupon code" type="text">
+                            <input placeholder="nhập mã giảm giá" type="text">
                             <div class="apply-btn">
-                                <button type="submit" class="edu-btn btn-medium">Apply</button>
+                                <button type="submit" class="edu-btn btn-medium">Áp dụng</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row row--25">
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="checkout-billing">
-                        <h3 class="title">Billing Details</h3>
+                        <h3 class="title">Thông tin đăng ký</h3>
                         <div class="row g-lg-5">
                             <div class="col-lg-6">
                                 <div class="form-group">
@@ -107,7 +107,8 @@
                             <textarea id="notes" rows="4" placeholder="Notes about your order, e.g. speacial notes for delivery."></textarea>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
                 <div class="col-lg-6">
                     <div class="order-summery checkout-summery">
                         <div class="summery-table-wrap">
@@ -115,48 +116,53 @@
                             <table class="table summery-table">
                                 <tbody>
                                     <tr>
-                                        <td>Natural Science Project <span class="quantity">x 1</span></td>
-                                        <td>$70.30</td>
+                                        <td>Tên khoá học</td>
+                                        <td><?= $course['ten_khoa_hoc'] ?> <span class="quantity"></span></td>
                                     </tr>
                                     <tr>
-                                        <td>The King of Drugs <span class="quantity">x 1</span></td>
-                                        <td>$25.50</td>
+                                        <td>Học Phí <span class="quantity"></span></td>
+                                        <td><?= number_format($course['hoc_phi']) ?> đ</td>
                                     </tr>
                                     <tr>
-                                        <td>The Silver Chair <span class="quantity">x 1</span></td>
-                                        <td>$90.00</td>
+                                        <td>Thời gian học <span class="quantity"></span></td>
+                                        <td><?= $course['thoi_gian'] ?> tuần</td>
                                     </tr>
-                                    <tr class="order-subtotal">
-                                        <td>Sub Total</td>
-                                        <td>$150.50</td>
+                                    <tr>
+                                        <td>Lớp</td>
+                                        <td><?= $class['ten_lop'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Địa điểm học</td>
+                                        <td><?= $class['dia_diem_hoc'] ?></td>
                                     </tr>
                                     <tr class="order-total">
-                                        <td>Order Total</td>
-                                        <td>$150.50</td>
+                                        <td>Tổng thanh toán</td>
+                                        <td><?= number_format($course['hoc_phi']) ?> đ</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div class="order-payment">
-                        <h4 class="title">Payment</h4>
+                </div>
+                <div class="col-lg-6">
+                    <div class="order-payment" style="margin: 0;">
+                        <h4 class="title">Phương thức thanh toán</h4>
                         <div class="payment-method">
                             <div class="form-group">
                                 <div class="edu-form-check">
                                     <input type="radio" id="pay-bank" name="payment">
-                                    <label for="pay-bank">Direct Bank Transfer</label>
+                                    <label for="pay-bank">Chuyển qua: </label>
                                 </div>
-                                <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                <p>Số Tài Khoản: 19038543686016 (Ngân hàng TechcomBank) - Chủ tài khoản: Nguyễn Trường Giang</p>
                             </div>
                             <div class="form-group">
                                 <div class="edu-form-check">
                                     <input type="radio" id="pay-pal" name="payment">
-                                    <label for="pay-pal">PayPal</label>
-                                    <a href="#">What is Paypal?</a>
+                                    <label for="pay-pal">Thanh toán trực tiếp tại lớp học</label>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="edu-btn order-place">Place Your order <i class="icon-4"></i></a>
+                        <button type="submit" name="complete_order" class="edu-btn order-place">Hoàn tất thanh toán <i class="icon-4"></i></button>
                     </div>
                 </div>
             </div>

@@ -55,5 +55,8 @@ switch ($url) {
     case 'order':
         dang_ky_khoa_hoc();
         break;
+    case 'complete_order':
+        complete_order();
+        break;
 }
 include('view/client/v_footer.php');

@@ -111,16 +111,9 @@
                                         <li class="has-droupdown">
                                             <a href="#"><i class="icon-1"></i>Danh mục</a>
                                             <ul class="submenu">
-                                                <li><a href="course-one.html">Design</a></li>
-                                                <li><a href="course-one.html">Development</a></li>
-                                                <li><a href="course-one.html">Architecture</a></li>
-                                                <li><a href="course-one.html">Life Style</a></li>
-                                                <li><a href="course-one.html">Data Science</a></li>
-                                                <li><a href="course-one.html">Marketing</a></li>
-                                                <li><a href="course-one.html">Music</a></li>
-                                                <li><a href="course-one.html">Photography</a></li>
-                                                <li><a href="course-one.html">Finance</a></li>
-                                                <li><a href="course-one.html">Motivation</a></li>
+                                                <?php foreach (danh_sach_danh_muc() as $category) : ?>
+                                                    <li><a href="index.php?url=all_courses&category_id=<?= $category['ma_danhmuc'] ?>"><?= $category['ten_danhmuc'] ?></a></li>
+                                                <?php endforeach; ?>
                                             </ul>
                                         </li>
                                     </ul>

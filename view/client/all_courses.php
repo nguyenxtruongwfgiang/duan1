@@ -28,26 +28,9 @@
 
                 <div class="edu-sorting-area">
                     <div class="sorting-left">
-                        <h6 class="showing-text">We found <span>71</span> courses available for you</h6>
+                        <h6 class="showing-text">We found <span><?= count($courses); ?></span> courses available for you</h6>
                     </div>
-                    <div class="sorting-right">
-                        <div class="layout-switcher">
-                            <label>Grid</label>
-                            <ul class="switcher-btn">
-                                <li><a href="course-one.html" class=""><i class="icon-53"></i></a></li>
-                                <li><a href="course-four.html" class="active"><i class="icon-54"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="edu-sorting">
-                            <div class="icon"><i class="icon-55"></i></div>
-                            <select class="edu-select">
-                                <option>Filters</option>
-                                <option>Low To High</option>
-                                <option>High Low To</option>
-                                <option>Last Viewed</option>
-                            </select>
-                        </div>
-                    </div>
+                    
                 </div>
                 <?php foreach ($courses as $course) : ?>
                     <div class="edu-course course-style-4 course-style-9">

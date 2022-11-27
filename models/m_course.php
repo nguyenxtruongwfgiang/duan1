@@ -29,7 +29,7 @@ function select_one_teacher($teacher_id)
     return $teacher;
 }
 
-function get_class_by_class_id($course_id){
+function get_classes_by_class_id($course_id){
     $sql = "SELECT * FROM lop WHERE ma_khoa_hoc = '$course_id'";
     $classes = getData($sql, FETCH_ALL);
     return $classes;
