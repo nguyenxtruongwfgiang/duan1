@@ -79,7 +79,7 @@
                                         <div class="col-md-5">
                                             <div class="input-append date">
                                                 <div id="dateIcon" class="input-group datePicker">
-                                                    <input type="date" value="<?= $class['ngay_khai_giang'] ?>" class="formDatePicker form-control" name="ngay_khai_giang" placeholder="ngày khai giảng" data-input>
+                                                    <input type="date" value="<?= date('Y-m-d', strtotime($class['ngay_khai_giang'])) ?>" class="formDatePicker form-control" name="ngay_khai_giang" placeholder="ngày khai giảng" data-input>
                                                     <!-- <span class="dateBtn">
                                                         <a class="input-button" title="toggle" data-toggle>
                                                             <i class="icon-calendar"></i>

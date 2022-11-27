@@ -21,3 +21,16 @@ function get_courses_by_category($category_id)
     $courses = getData($sql, FETCH_ALL);
     return $courses;
 }
+
+function select_one_teacher($teacher_id)
+{
+    $sql = "SELECT * FROM giang_vien WHERE ma_giang_vien = '$teacher_id'";
+    $teacher = getData($sql, FETCH_ONE);
+    return $teacher;
+}
+
+function get_class_by_class_id($course_id){
+    $sql = "SELECT * FROM lop WHERE ma_khoa_hoc = '$course_id'";
+    $classes = getData($sql, FETCH_ALL);
+    return $classes;
+}

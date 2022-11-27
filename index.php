@@ -3,8 +3,9 @@ session_start();
 require('controllers/log_in.php');
 require('controllers/c_home.php');
 require('controllers/c_course.php');
-require('view/client/v_header.php');
+include('view/client/v_header.php');
 require('controllers/c_user.php');
+require('controllers/c_order.php');
 // include('controllers/dangky.php');
 // include('./admin/controllers/accountController.php');
 // include('./admin/models/account.php');
@@ -50,6 +51,9 @@ switch ($url) {
         echo "<script>
             window.location.href='index.php'
         </script>";
+        break;
+    case 'order':
+        dang_ky_khoa_hoc();
         break;
 }
 include('view/client/v_footer.php');

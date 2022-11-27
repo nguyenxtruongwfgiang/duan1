@@ -53,14 +53,14 @@
                     <div class="edu-course course-style-4 course-style-9">
                         <div class="inner">
                             <div class="thumbnail" style="width:150px;">
-                                <a href="course-details.html">
+                                <a href="index.php?url=course_detail&course_id=<?= $course['ma_khoa_hoc'] ?>">
                                     <img src="public/image/course/<?= $course['hinh'] ?>" alt="Course Meta" width="50%">
                                 </a>
                             </div>
                             <div class="content">
-                                <div class="course-price"><?= number_format($course['hoc_phi']) ?>Đ</div>
+                                <div class="course-price"><?= number_format($course['hoc_phi']) ?> đ</div>
                                 <h6 class="title">
-                                    <a href="course-details.html"><?= $course['ten_khoa_hoc'] ?></a>
+                                    <a href="index.php?url=course_detail&course_id=<?= $course['ma_khoa_hoc'] ?>"><?= $course['ten_khoa_hoc'] ?></a>
                                 </h6>
                                 <div class="course-rating">
                                     <div class="rating">

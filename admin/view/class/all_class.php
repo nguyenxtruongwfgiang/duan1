@@ -66,7 +66,7 @@
                                             <td><?= $class['ma_lop'] ?></td>
                                             <td><?= $class['ten_lop'] ?></td>
                                             <td><?= $class['ca_hoc'] ?></td>
-                                            <td><?= $class['ngay_khai_giang'] ?></td>
+                                            <td><?= date("d/m/Y", strtotime($class['ngay_khai_giang'])) ?></td>
                                             <td><?= $class['dia_diem_hoc'] ?></td>
                                             <td><?= $class['ma_khoa_hoc'] ?></td>
                                             <td><?= $class['ma_giang_vien'] ?></td>
