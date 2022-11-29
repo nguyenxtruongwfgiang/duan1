@@ -38,5 +38,6 @@ function thong_ke_khoa_hoc(){
 }
 
 function bieu_do_thong_ke(){
+    $danh_sach_thong_ke = danh_sach_thong_ke();
     include('view/chart/bieu_do.php');
 }

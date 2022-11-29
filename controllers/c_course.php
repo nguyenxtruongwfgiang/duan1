@@ -17,6 +17,8 @@ function course_detail()
         $course_id = $_GET['course_id'];
         $course = get_course_by_id($course_id);
         $classes = get_classes_by_class_id($course_id);
+        $courses = get_courses_by_category_id($course['ma_loai'], $course['ma_khoa_hoc']);
+        $category = get_category_by_course($course['ma_loai']);
         include('view/client/course_detail.php');
     }
 }

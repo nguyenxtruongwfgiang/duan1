@@ -53,9 +53,6 @@
                             <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="true">Overview</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="carriculam-tab" data-bs-toggle="tab" data-bs-target="#carriculam" type="button" role="tab" aria-controls="carriculam" aria-selected="false">Carriculam</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
                             <button class="nav-link" id="instructor-tab" data-bs-toggle="tab" data-bs-target="#instructor" type="button" role="tab" aria-controls="instructor" aria-selected="false">Instructor</button>
                         </li>
 
@@ -89,6 +86,7 @@
                                                 <th scope="col" class="product-title">Ngày Khai Giảng</th>
                                                 <th scope="col" class="product-price">Địa Điểm Học</th>
                                                 <th scope="col" class="product-quantity">Giảng Viên</th>
+                                                <!-- <th scope="col">Còn</th> -->
                                                 <th scope="col" class="product-subtotal">Action</th>
                                             </tr>
                                         </thead>
@@ -110,9 +108,28 @@
                                                             <?php $teacher = select_one_teacher($class['ma_giang_vien']) ?>
                                                             <?= $teacher['ten_giang_vien'] ?>
                                                         </td>
-                                                        <td class="product-subtotal" data-title="Subtotal">
-                                                            <a class="edu-btn btn-medium" href="index.php?url=order&class_id=<?= $class['ma_lop'] ?>">Đăng Ký</a>
-                                                        </td>
+                                                        
+                                                        <!-- check khi tồn tại user -->
+                                                        <?php
+                                                        if (isset($_SESSION['user'])) {
+                                                            $is_order = return_oder($class['ma_lop'], $_SESSION['user']['ma_nguoi_dung']); ?>
+                                                            <?php if ($is_order['KQ'] == 0) { ?>
+                                                                <td class="product-subtotal" data-title="Subtotal">
+                                                                    <a class="edu-btn btn-medium" href="index.php?url=order&class_id=<?= $class['ma_lop'] ?>">Đăng Ký</a>
+                                                                </td>
+                                                            <?php } else { ?>
+                                                                <td class="product-subtotal" data-title="Subtotal">
+                                                                    <a class="edu-btn btn-medium btn" style="font-size: 15px; width: 150px;">Đã đăng Ký</a>
+                                                                </td>
+                                                            <?php }  ?>
+                                                            <!-- khi không tồn tại user -->
+                                                        <?php } else { ?>
+                                                            <td class="product-subtotal" data-title="Subtotal">
+                                                                <a class="edu-btn btn-medium" href="index.php?url=order&class_id=<?= $class['ma_lop'] ?>">Đăng Ký</a>
+                                                            </td>
+                                                        <?php } ?>
+
+
                                                     </tr>
                                                 <?php endif ?>
                                             <?php endforeach; ?>
@@ -122,80 +139,6 @@
                                     <!-- </div> -->
                                 </div>
 
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="carriculam" role="tabpanel" aria-labelledby="carriculam-tab">
-                            <div class="course-tab-content">
-                                <div class="course-curriculam">
-                                    <h3 class="heading-title">Course Curriculum</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exerec tation ullamco laboris nis aliquip commodo consequat.</p>
-                                    <div class="course-lesson">
-                                        <h5 class="title">Week 1-4</h5>
-                                        <p>Advanced story telling techniques for writers: Personas, Characters & Plots</p>
-                                        <ul>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Introduction</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Course Overview</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Local Development Environment Tools</div>
-                                                <div class="badge-list">
-                                                    <span class="badge badge-primary">0 Question</span>
-                                                    <span class="badge badge-secondary">10 Minutes</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Course Exercise / Reference Files</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Code Editor Installation (Optional if you have one)</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Embedding PHP in HTML</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="course-lesson">
-                                        <h5 class="title">Week 5-8</h5>
-                                        <p>Advanced story telling techniques for writers: Personas, Characters & Plots</p>
-                                        <ul>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Defining Functions</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i>Function Parameters</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Return Values From Functions</div>
-                                                <div class="badge-list">
-                                                    <span class="badge badge-primary">0 Question</span>
-                                                    <span class="badge badge-secondary">10 Minutes</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Global Variable and Scope</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i>Newer Way of creating a Constant</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                            <li>
-                                                <div class="text"><i class="icon-65"></i> Constants</div>
-                                                <div class="icon"><i class="icon-68"></i></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
@@ -449,231 +392,44 @@
 <div class="gap-bottom-equal">
     <div class="container">
         <div class="section-title section-left" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-            <h3 class="title">More Courses for You</h3>
+            <h3 class="title">Các Khoá Học Cùng Loại</h3>
         </div>
         <div class="row g-5">
             <!-- Start Single Course  -->
-            <div class="col-12 col-xl-4 col-lg-6 col-md-6" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-course course-style-5 inline" data-tipped-options="inline: 'inline-tooltip-1'">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="course-details.html">
-                                <img src="view/assets/images/course/course-15.jpg" alt="Course Meta">
-                            </a>
-                        </div>
-                        <div class="content">
-                            <div class="course-price price-round">$30</div>
-                            <span class="course-level">Cooking</span>
-                            <h5 class="title">
-                                <a href="course-details.html">Healthy Sushi Roll - Japanese Popular Cooking Class</a>
-                            </h5>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(5)</span>
+            <?php foreach ($courses as $course) : ?>
+                <div class="col-12 col-xl-4 col-lg-6 col-md-6" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                    <div class="edu-course course-style-5 inline" data-tipped-options="inline: 'inline-tooltip-1'">
+                        <div class="inner">
+                            <div class="thumbnail">
+                                <a href="index.php?url=course_detail&course_id=<?= $course['ma_khoa_hoc'] ?>">
+                                    <img src="public/image/course/<?= $course['hinh'] ?>" alt="Course Meta">
+                                </a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectur elit sed eiusmod ex tempor.</p>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>15 Lessons</li>
-                                <li><i class="icon-25"></i>42 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="inline-tooltip-1" style="display:none">
-                    <div class="course-layout-five-tooltip-content">
-                        <div class="content">
-                            <span class="course-level">Cooking</span>
-                            <h5 class="title">
-                                <a href="course-details.html">Healthy Sushi Roll - Japanese Popular Cooking Class</a>
-                            </h5>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
+                            <div class="content">
+                                <!-- <div class="course-price price-round"><?= $course['level'] ?></div> -->
+                                <span class="course-level"><?= $category['ten_danhmuc'] ?></span>
+                                <h5 class="title">
+                                    <a href="index.php?url=course_detail&course_id=<?= $course['ma_khoa_hoc'] ?>"><?= $course['ten_khoa_hoc'] ?></a>
+                                </h5>
+                                <div class="course-rating">
+                                    <div class="rating">
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                        <i class="icon-23"></i>
+                                    </div>
+                                    <span class="rating-count">(5)</span>
                                 </div>
-                                <span class="rating-count">(5)</span>
-                            </div>
-                            <ul class="course-meta">
-                                <li>15 Lessons</li>
-                                <li>35 hrs</li>
-                                <li>Beginner</li>
-                            </ul>
-                            <div class="course-feature">
-                                <h6 class="title">What You’ll Learn?</h6>
-                                <ul>
-                                    <li>Professional Japanese cooking from beginners to experts</li>
-                                    <li>Will be able to cook authentic Italian recipes in their own kitchen</li>
-                                    <li>Understand the HOW of cooking, before thinking of the WHAT to cook.</li>
+                                <p style="text-overflow: ellipsis; width: 100%; white-space: nowrap;overflow: hidden"><?= $course['thong_tin_khoa_hoc'] ?></p>
+                                <ul class="course-meta">
+                                    <li><i class="icon-24"></i><?= $course['thoi_gian'] ?> tuần</li>
                                 </ul>
                             </div>
-                            <div class="button-group">
-                                <a href="#" class="edu-btn btn-medium">Add to Cart</a>
-                                <a href="#" class="wishlist-btn btn-outline-dark"><i class="icon-22"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- End Single Course  -->
-
-            <!-- Start Single Course  -->
-            <div class="col-12 col-xl-4 col-lg-6 col-md-6" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-course course-style-5 inline" data-tipped-options="inline: 'inline-tooltip-2'">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="course-details.html">
-                                <img src="view/assets/images/course/course-16.jpg" alt="Course Meta">
-                            </a>
-                        </div>
-                        <div class="content">
-                            <div class="course-price price-round">$40</div>
-                            <span class="course-level">Cooking</span>
-                            <h5 class="title">
-                                <a href="course-details.html">Nutrition Kitchen - Basics of Cooking for Busy People</a>
-                            </h5>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(4.8)</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectur elit sed eiusmod ex tempor.</p>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>35 Lessons</li>
-                                <li><i class="icon-25"></i>80 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="inline-tooltip-2" style="display:none">
-                    <div class="course-layout-five-tooltip-content">
-                        <div class="content">
-                            <span class="course-level">Cooking</span>
-                            <h5 class="title">
-                                <a href="course-details.html">Nutrition Kitchen - Basics of Cooking for Busy People</a>
-                            </h5>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(4.8)</span>
-                            </div>
-                            <ul class="course-meta">
-                                <li>35 Lessons</li>
-                                <li>28 hrs</li>
-                                <li>Advanced</li>
-                            </ul>
-                            <div class="course-feature">
-                                <h6 class="title">What You’ll Learn?</h6>
-                                <ul>
-                                    <li>Prepare a huge variety of simple, delicious, healthy recipes.</li>
-                                    <li>Professional Indian cooking from beginners to experts</li>
-                                    <li>Serve delicious and healthy meals for your loved ones.</li>
-                                </ul>
-                            </div>
-                            <div class="button-group">
-                                <a href="#" class="edu-btn btn-medium">Add to Cart</a>
-                                <a href="#" class="wishlist-btn btn-outline-dark"><i class="icon-22"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Course  -->
-
-            <!-- Start Single Course  -->
-            <div class="col-12 col-xl-4 col-lg-6 col-md-6" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-course course-style-5 inline" data-tipped-options="inline: 'inline-tooltip-3'">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="course-details.html">
-                                <img src="view/assets/images/course/course-17.jpg" alt="Course Meta">
-                            </a>
-                        </div>
-                        <div class="content">
-                            <div class="course-price price-round">$50</div>
-                            <span class="course-level">Cooking</span>
-                            <h5 class="title">
-                                <a href="course-details.html">Vegan Thai Cooking Classes Popular Vegan Recipes</a>
-                            </h5>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(5)</span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectur elit sed eiusmod ex tempor.</p>
-                            <ul class="course-meta">
-                                <li><i class="icon-24"></i>8 Lessons</li>
-                                <li><i class="icon-25"></i>20 Students</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="inline-tooltip-3" style="display:none">
-                    <div class="course-layout-five-tooltip-content">
-                        <div class="content">
-                            <span class="course-level">Cooking</span>
-                            <h5 class="title">
-                                <a href="course-details.html">Vegan Thai Cooking Classes Popular Vegan Recipes</a>
-                            </h5>
-                            <div class="course-rating">
-                                <div class="rating">
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                    <i class="icon-23"></i>
-                                </div>
-                                <span class="rating-count">(5)</span>
-                            </div>
-                            <ul class="course-meta">
-                                <li>8 Lessons</li>
-                                <li>20 hrs</li>
-                                <li>All Levels</li>
-                            </ul>
-                            <div class="course-feature">
-                                <h6 class="title">What You’ll Learn?</h6>
-                                <ul>
-                                    <ul>
-                                        <li>Cook much loved recipes like ravioli, pizza and pesto from scratch</li>
-                                        <li>Cook better than restaurant Thai food at home</li>
-                                        <li>Keep your food safe from harmful bacteria and disease.</li>
-                                    </ul>
-                                </ul>
-                            </div>
-                            <div class="button-group">
-                                <a href="#" class="edu-btn btn-medium">Add to Cart</a>
-                                <a href="#" class="wishlist-btn btn-outline-dark"><i class="icon-22"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
             <!-- End Single Course  -->
         </div>
     </div>

@@ -125,7 +125,7 @@
                             <i class="<?= $danh_muc['icon'] ?>"></i>
                         </div>
                         <div class="content">
-                            <a href="course-one.html">
+                            <a href="index.php?url=all_courses&category_id=<?= $danh_muc['ma_danhmuc'] ?>">
                                 <h5 class="title"><?= $danh_muc['ten_danhmuc'] ?></h5>
                             </a>
                         </div>
@@ -362,7 +362,6 @@
                         </div>
                         <div class="course-hover-content">
                             <div class="content">
-                                <button class="wishlist-btn"><i class="icon-22"></i></button>
                                 <span class="course-level"><?= $khoa_hoc['level'] ?></span>
                                 <h6 class="title">
                                     <a href="index.php?url=course_detail&course_id=<?= $khoa_hoc['ma_khoa_hoc'] ?>"><?= $khoa_hoc['ten_khoa_hoc'] ?></a>
@@ -457,113 +456,6 @@
 <!--=       Testimonial Area Start      =-->
 <!--=====================================-->
 <!-- Start Testimonial Area  -->
-<div class="testimonial-area-1 section-gap-equal">
-    <div class="container">
-        <div class="row g-lg-5">
-            <div class="col-lg-5">
-                <div class="testimonial-heading-area">
-                    <div class="section-title section-left" data-sal-delay="50" data-sal="slide-up" data-sal-duration="800">
-                        <span class="pre-title">Testimonials</span>
-                        <h2 class="title">What Our Students Have To Say</h2>
-                        <span class="shape-line"><i class="icon-19"></i></span>
-                        <p>Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor incididunt labore dolore magna aliquaenim ad minim.</p>
-                        <a href="#" class="edu-btn btn-large">View All<i class="icon-4"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="home-one-testimonial-activator swiper ">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="testimonial-grid">
-                                <div class="thumbnail">
-                                    <img src="view/assets/images/testimonial/testimonial-01.png" alt="Testimonial">
-                                    <span class="qoute-icon"><i class="icon-26"></i></span>
-
-                                </div>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor amet consec tur elit adicing sed do usmod zx tempor enim minim veniam quis nostrud exer citation.</p>
-                                    <div class="rating-icon">
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                    </div>
-                                    <h5 class="title">Ray Sanchez</h5>
-                                    <span class="subtitle">Student</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-grid">
-                                <div class="thumbnail">
-                                    <img src="view/assets/images/testimonial/testimonial-02.png" alt="Testimonial">
-                                    <span class="qoute-icon"><i class="icon-26"></i></span>
-
-                                </div>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor amet consec tur elit adicing sed do usmod zx tempor enim minim veniam quis nostrud exer citation.</p>
-                                    <div class="rating-icon">
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                    </div>
-                                    <h5 class="title">Thomas Lopez</h5>
-                                    <span class="subtitle">Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-grid">
-                                <div class="thumbnail">
-                                    <img src="view/assets/images/testimonial/testimonial-03.png" alt="Testimonial">
-                                    <span class="qoute-icon"><i class="icon-26"></i></span>
-
-                                </div>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor amet consec tur elit adicing sed do usmod zx tempor enim minim veniam quis nostrud exer citation.</p>
-                                    <div class="rating-icon">
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                    </div>
-                                    <h5 class="title">Amber Page</h5>
-                                    <span class="subtitle">Developer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-grid">
-                                <div class="thumbnail">
-                                    <img src="view/assets/images/testimonial/testimonial-04.png" alt="Testimonial">
-                                    <span class="qoute-icon"><i class="icon-26"></i></span>
-
-                                </div>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor amet consec tur elit adicing sed do usmod zx tempor enim minim veniam quis nostrud exer citation.</p>
-                                    <div class="rating-icon">
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                    </div>
-                                    <h5 class="title">Robert Tapp</h5>
-                                    <span class="subtitle">Content Creator</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- End Testimonial Area  -->
 <!--=====================================-->
 <!--=      Call To Action Area Start   	=-->
@@ -723,36 +615,7 @@
 <!--=====================================-->
 <!--=      CTA Banner Area Start   		=-->
 <!--=====================================-->
-<!-- Start Ad Banner Area  -->
-<div class="edu-cta-banner-area home-one-cta-wrapper bg-image">
-    <div class="container">
-        <div class="edu-cta-banner">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                        <h2 class="title">Get Your Quality Skills <span class="color-secondary">Certificate</span> Through EduBlink</h2>
-                        <a href="contact-us.html" class="edu-btn">Get started now <i class="icon-4"></i></a>
-                    </div>
-                </div>
-            </div>
-            <ul class="shape-group">
-                <li class="shape-01 scene">
-                    <img data-depth="2.5" src="view/assets/images/cta/shape-10.png" alt="shape">
-                </li>
-                <li class="shape-02 scene">
-                    <img data-depth="-2.5" src="view/assets/images/cta/shape-09.png" alt="shape">
-                </li>
-                <li class="shape-03 scene">
-                    <img data-depth="-2" src="view/assets/images/cta/shape-08.png" alt="shape">
-                </li>
-                <li class="shape-04 scene">
-                    <img data-depth="2" src="view/assets/images/about/shape-13.png" alt="shape">
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- End Ad Banner Area  -->
+
 <!--=====================================-->
 <!--=      		Brand Area Start   		=-->
 <!--=====================================-->
@@ -805,111 +668,6 @@
 <!--=====================================-->
 <!--=      		Blog Area Start   		=-->
 <!--=====================================-->
-<!-- Start Blog Area  -->
-<div class="edu-blog-area blog-area-1 edu-section-gap">
-    <div class="container">
-        <div class="section-title section-center" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
-            <span class="pre-title">Latest Articles</span>
-            <h2 class="title">Get News with EduBlink</h2>
-            <span class="shape-line"><i class="icon-19"></i></span>
-        </div>
-        <div class="row g-5">
-            <!-- Start Blog Grid  -->
-            <div class="col-lg-4 col-md-6 col-12" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-blog blog-style-1">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="blog-details.html">
-                                <img src="view/assets/images/blog/blog-01.jpg" alt="Blog Images">
-                            </a>
-                        </div>
-                        <div class="content position-top">
-                            <div class="read-more-btn">
-                                <a class="btn-icon-round" href="blog-details.html"><i class="icon-4"></i></a>
-                            </div>
-                            <div class="category-wrap">
-                                <a href="#" class="blog-category">ONLINE</a>
-                            </div>
-                            <h5 class="title"><a href="blog-details.html">Become a Better Blogger: Content Planning</a></h5>
-                            <ul class="blog-meta">
-                                <li><i class="icon-27"></i>Oct 10, 2021</li>
-                                <li><i class="icon-28"></i>Com 09</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet cons tetur adipisicing sed.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Blog Grid  -->
-            <!-- Start Blog Grid  -->
-            <div class="col-lg-4 col-md-6 col-12" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-blog blog-style-1">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="blog-details.html">
-                                <img src="view/assets/images/blog/blog-02.jpg" alt="Blog Images">
-                            </a>
-                        </div>
-                        <div class="content position-top">
-                            <div class="read-more-btn">
-                                <a class="btn-icon-round" href="blog-details.html"><i class="icon-4"></i></a>
-                            </div>
-                            <div class="category-wrap">
-                                <a href="#" class="blog-category">LECTURE</a>
-                            </div>
-                            <h5 class="title"><a href="blog-details.html">How to Keep Workouts Fresh in the Morning</a></h5>
-                            <ul class="blog-meta">
-                                <li><i class="icon-27"></i>Oct 10, 2021</li>
-                                <li><i class="icon-28"></i>Com 09</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet cons tetur adipisicing sed do eiusmod ux tempor incid idunt labore dol oremagna aliqua.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Blog Grid  -->
-            <!-- Start Blog Grid  -->
-            <div class="col-lg-4 col-md-6 col-12" data-sal-delay="300" data-sal="slide-up" data-sal-duration="800">
-                <div class="edu-blog blog-style-1">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="blog-details.html">
-                                <img src="view/assets/images/blog/blog-03.jpg" alt="Blog Images">
-                            </a>
-                        </div>
-                        <div class="content position-top">
-                            <div class="read-more-btn">
-                                <a class="btn-icon-round" href="blog-details.html"><i class="icon-4"></i></a>
-                            </div>
-                            <div class="category-wrap">
-                                <a href="#" class="blog-category">BUSINESS</a>
-                            </div>
-                            <h5 class="title"><a href="blog-details.html">Four Ways to Keep Your Workout Routine Fresh</a></h5>
-                            <ul class="blog-meta">
-                                <li><i class="icon-27"></i>Oct 10, 2021</li>
-                                <li><i class="icon-28"></i>Com 09</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet cons tetur adipisicing sed do eiusmod ux tempor incid idunt.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Blog Grid  -->
-        </div>
-    </div>
-    <ul class="shape-group">
-        <li class="shape-1 scene">
-            <img data-depth="-1.4" src="view/assets/images/about/shape-02.png" alt="Shape">
-        </li>
-        <li class="shape-2 scene">
-            <span data-depth="2.5"></span>
-        </li>
-        <li class="shape-3 scene">
-            <img data-depth="-2.3" src="view/assets/images/counterup/shape-05.png" alt="Shape">
-        </li>
-    </ul>
-</div>
-<!-- End Blog Area  -->
 <!--=====================================-->
 <!--=        Footer Area Start       	=-->
 <!--=====================================-->

@@ -29,8 +29,26 @@ function select_one_teacher($teacher_id)
     return $teacher;
 }
 
-function get_classes_by_class_id($course_id){
+function get_classes_by_class_id($course_id)
+{
     $sql = "SELECT * FROM lop WHERE ma_khoa_hoc = '$course_id'";
     $classes = getData($sql, FETCH_ALL);
     return $classes;
+}
+
+function show_limit_courses()
+{
+    $sql = "SELECT * FROM khoa_hoc order by ma_khoa_hoc desc limit 4";
+    $danh_sach_khoa_hoc = getData($sql, FETCH_ALL);
+    return $danh_sach_khoa_hoc;
+}
+
+function get_courses_by_category_id($category_id, $course_id){
+    $sql = "SELECT * FROM khoa_hoc WHERE ma_loai = '$category_id' AND ma_khoa_hoc != '$course_id' order by ma_khoa_hoc desc limit 3";
+    $courses = getData($sql, FETCH_ALL);
+    return $courses;
+}
+
+function return_slot(){
+    $sql = "SELECT";
 }

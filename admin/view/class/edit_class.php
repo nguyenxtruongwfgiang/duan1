@@ -124,7 +124,7 @@
                                                 <option value="">Select...</option>
                                                 <?php foreach (danh_sach_giang_vien() as $giang_vien) : ?>
                                                     <option value="<?= $giang_vien['ma_giang_vien'] ?>"
-                                                    <?= ($giang_vien['ma_giang_vien'] == $class['ma_khoa_hoc']) ? 'selected' : '' ?>>
+                                                    <?= ($giang_vien['ma_giang_vien'] == $class['ma_giang_vien']) ? 'selected' : '' ?>>
                                                     <?= $giang_vien['ten_giang_vien'] ?></option>
                                                 <?php endforeach; ?>
                                             </select>

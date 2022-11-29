@@ -111,6 +111,7 @@
                                         <li class="has-droupdown">
                                             <a href="#"><i class="icon-1"></i>Danh mục</a>
                                             <ul class="submenu">
+                                                <li><a href="index.php?url=all_courses">Tất Cả</a></li>
                                                 <?php foreach (danh_sach_danh_muc() as $category) : ?>
                                                     <li><a href="index.php?url=all_courses&category_id=<?= $category['ma_danhmuc'] ?>"><?= $category['ten_danhmuc'] ?></a></li>
                                                 <?php endforeach; ?>
@@ -128,25 +129,11 @@
 
                                     <li class="has-droupdown"><a href="#">Khoá học</a>
                                         <ul class="submenu">
+                                            <li><a href="index.php?url=all_courses">Tất Cả</a></li>
                                             <?php foreach (danh_sach_danh_muc() as $category) : ?>
                                                 <li><a href="index.php?url=all_courses&category_id=<?= $category['ma_danhmuc'] ?>"><?= $category['ten_danhmuc'] ?></a></li>
                                             <?php endforeach; ?>
 
-                                        </ul>
-                                    </li>
-
-                                    <li class="has-droupdown"><a href="#">Blog</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog-standard.html">Blog Standard</a></li>
-                                            <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                                            <li><a href="blog-list.html">Blog List</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-droupdown"><a href="#">Liên hệ</a>
-                                        <ul class="submenu">
-                                            <li><a href="contact-us.html">Contact Us</a></li>
-                                            <li><a href="contact-me.html">Contact Me</a></li>
                                         </ul>
                                     </li>
                                 </ul>
