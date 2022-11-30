@@ -64,106 +64,39 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="control-label col-md-3">Payment Duration
-                                        </label>
-                                        <div class="col-md-5">
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                    Monthly
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                                                    Session
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option2">
-                                                    Yearly
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="control-label col-md-3">Amount
+                                        <label class="control-label col-md-3">Học Phí
                                             <span class="required"> * </span>
                                         </label>
                                         <div class="col-md-5">
-                                            <input name="number" type="text" placeholder="enter amount" class="form-control input-height" />
+                                            <p><?= number_format($chi_tiet_hoa_don['gia_tien']) ?> đ</p>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="control-label col-md-3">Collection Date
-                                        </label>
-                                        <div class="col-md-5">
-                                            <div class="input-append date">
-                                                <div id="dateIcon" class="input-group datePicker">
-                                                    <input class="formDatePicker form-control" type="text" placeholder="Select Date.." data-input>
-                                                    <span class="dateBtn">
-                                                        <a class="input-button" title="toggle" data-toggle>
-                                                            <i class="icon-calendar"></i>
-                                                        </a>
-                                                        <a class="input-button" title="clear" data-clear>
-                                                            <i class="icon-close"></i>
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="control-label col-md-3">Payment Method
+                                        <label class="control-label col-md-3">Ngày đăng ký
                                             <span class="required"> * </span>
                                         </label>
                                         <div class="col-md-5">
-                                            <select class="form-select input-height" name="select">
-                                                <option value="">Select...</option>
-                                                <option value="Category 1">Cash</option>
-                                                <option value="Category 2">Cheque</option>
-                                                <option value="Category 3">Credit Card</option>
-                                                <option value="Category 4">Debit Card</option>
-                                                <option value="Category 5">Netbanking</option>
-                                                <option value="Category 6">Other</option>
+                                            <p><?= date("d/m/Y", strtotime($chi_tiet_hoa_don['ngay_dk'])) ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3">Trạng Thái
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <select class="form-select input-height" name="trang_thai">
+                                                <option value="0" <?= ($chi_tiet_hoa_don['trang_thai'] == 0) ? 'selected' : '' ?>>Chưa thanh toán</option>
+                                                <option value="1" <?= ($chi_tiet_hoa_don['trang_thai'] == 1) ? 'selected' : '' ?>>Đã thanh toán</option>
                                             </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="control-label col-md-3">Payment Reference Number
-                                            <span class="required"> * </span>
-                                        </label>
-                                        <div class="col-md-5">
-                                            <input name="number" type="text" placeholder="enter reference amount" class="form-control input-height" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="control-label col-md-3">Payment Status
-                                            <span class="required"> * </span>
-                                        </label>
-                                        <div class="col-md-5">
-                                            <select class="form-select input-height" name="select">
-                                                <option value="">Select...</option>
-                                                <option value="Category 1">Paid</option>
-                                                <option value="Category 2">Unpaid</option>
-                                                <option value="Category 3">Pending</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="control-label col-md-3">Payment Details
-                                        </label>
-                                        <div class="col-md-5">
-                                            <textarea name="details" placeholder="payment details" class="form-control-textarea" rows="5"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-actions">
                                     <div class="row">
                                         <div class="offset-md-3 col-md-9">
-                                            <button type="submit" class="btn btn-info m-r-20">Submit</button>
-                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <input type="hidden" name="ma_dk" value="<?= $chi_tiet_hoa_don['ma_dk'] ?>">
+                                            <button type="submit" name="cap_nhat_trang_thai_don_hang" class="btn btn-info m-r-20">Cập nhật</button>
+                                            <button type="button" class="btn btn-default"><a href="index.php?url=danh_sach_hoa_don">Trở về</a></button>
                                         </div>
                                     </div>
                                 </div>

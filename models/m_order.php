@@ -1,8 +1,8 @@
 <?php
 
-function get_class_by_class_id($course_id)
+function get_class_by_class_id($class_id)
 {
-    $sql = "SELECT * FROM lop WHERE ma_khoa_hoc = '$course_id'";
+    $sql = "SELECT * FROM lop WHERE ma_lop = '$class_id'";
     $class = getData($sql, FETCH_ONE);
     return $class;
 }
