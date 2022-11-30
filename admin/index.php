@@ -6,6 +6,7 @@ require('controllers/c_category.php');
 require('controllers/c_course.php');
 require('controllers/c_teacher.php');
 require('controllers/c_class.php');
+require('controllers/c_bill.php');
 
 
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
@@ -14,7 +15,7 @@ switch ($url) {
         hien_thi_dashboard();
         break;
     case 'hoc_vien':
-        hien_thi_dashboard();
+        hien_thi_hoc_vien();
         break;
     case 'them_moi_hoc_vien':
         them_moi_hoc_vien();
@@ -100,6 +101,19 @@ switch ($url) {
         break;
     case 'form_sua_nguoi_dung':
         form_sua_nguoi_dung();
+        break;
+
+    case 'danh_sach_hoa_don':
+        hien_thi_danh_sach_hoa_don();
+        break;
+    case 'form_sua_hoa_don':
+        hien_thi_form_sua_hoa_don();
+        break;
+    case 'sua_hoa_don':
+        sua_hoa_don();
+        break;
+    case 'xoa_hoa_don':
+        xoa_hoa_don();
         break;
 }
 

@@ -86,8 +86,9 @@
                                                 <th scope="col" class="product-title">Ngày Khai Giảng</th>
                                                 <th scope="col" class="product-price">Địa Điểm Học</th>
                                                 <th scope="col" class="product-quantity">Giảng Viên</th>
-                                                <!-- <th scope="col">Còn</th> -->
+                                                <th scope="col">Slot Còn Lại</th>
                                                 <th scope="col" class="product-subtotal">Action</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -108,12 +109,25 @@
                                                             <?php $teacher = select_one_teacher($class['ma_giang_vien']) ?>
                                                             <?= $teacher['ten_giang_vien'] ?>
                                                         </td>
-                                                        
+                                                        <!-- nếu số chỗ còn lại > 0 thì hiển thị -->
+                                                        <?php $slot_ordered = return_count_order($class['ma_lop']);
+                                                        if ($class['so_cho'] - $slot_ordered['ordered'] > 0) {
+                                                        ?>
+                                                            <td>
+                                                                <?= $class['so_cho'] - $slot_ordered['ordered'] ?>
+                                                            </td>
+                                                        <?php }
+                                                        // nếu số chỗ = 0 hiển thị đã hết chỗ
+                                                        if ($class['so_cho'] - $slot_ordered['ordered'] == 0) { ?>
+                                                            <td class="product-subtotal" data-title="Subtotal">
+                                                                <a class="edu-btn btn-secondary btn">Hết Chỗ</a>
+                                                            </td>
+                                                        <?php } ?>
                                                         <!-- check khi tồn tại user -->
                                                         <?php
                                                         if (isset($_SESSION['user'])) {
                                                             $is_order = return_oder($class['ma_lop'], $_SESSION['user']['ma_nguoi_dung']); ?>
-                                                            <?php if ($is_order['KQ'] == 0) { ?>
+                                                            <?php if ($is_order['KQ'] == 0 && $class['so_cho'] - $slot_ordered['ordered'] > 0) { ?>
                                                                 <td class="product-subtotal" data-title="Subtotal">
                                                                     <a class="edu-btn btn-medium" href="index.php?url=order&class_id=<?= $class['ma_lop'] ?>">Đăng Ký</a>
                                                                 </td>
@@ -124,9 +138,11 @@
                                                             <?php }  ?>
                                                             <!-- khi không tồn tại user -->
                                                         <?php } else { ?>
-                                                            <td class="product-subtotal" data-title="Subtotal">
-                                                                <a class="edu-btn btn-medium" href="index.php?url=order&class_id=<?= $class['ma_lop'] ?>">Đăng Ký</a>
-                                                            </td>
+                                                            <?php if ($class['so_cho'] - $slot_ordered['ordered'] > 0) { ?>
+                                                                <td class="product-subtotal" data-title="Subtotal">
+                                                                    <a class="edu-btn btn-medium" href="index.php?url=order&class_id=<?= $class['ma_lop'] ?>">Đăng Ký</a>
+                                                                </td>
+                                                            <?php } ?>
                                                         <?php } ?>
 
 

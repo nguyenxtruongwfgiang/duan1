@@ -25,10 +25,11 @@ function complete_order()
             $ngay_dk = date('Y-m-d', time());
             $gia_tien = $_POST['gia_tien'];
             $ma_lop = $_POST['ma_lop'];
+            $trang_thai = 0;
             if (isset($_SESSION['user'])) {
                 $ma_nguoi_dung = $_SESSION['user']['ma_nguoi_dung'];
             }
-            add_order_course($ngay_dk, $ma_lop, $ma_nguoi_dung, $gia_tien);
+            add_order_course($ngay_dk, $ma_lop, $ma_nguoi_dung, $gia_tien, $trang_thai);
             send_mail($ma_nguoi_dung, $ma_lop, $ngay_dk);
             include('view/client/order_success.php');
         }

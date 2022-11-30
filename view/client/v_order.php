@@ -38,6 +38,7 @@
                                     </tr>
                                     <tr>
                                         <td>Lớp</td>
+                                        <?php var_dump($class) ?>
                                         <td><?= $class['ten_lop'] ?></td>
                                     </tr>
                                     <tr>

@@ -54,7 +54,7 @@
                                         <th>Ca Học</th>
                                         <th>Ngày Khai Giảng</th>
                                         <th>Địa Điểm Học</th>
-                                        <th>Mã Khoá Học</th>
+                                        <th>Tên Khoá Học</th>
                                         <th>Giảng Viên</th>
                                         <th>Số Chỗ</th>
                                         <th>Actions</th>
@@ -68,7 +68,8 @@
                                             <td><?= $class['ca_hoc'] ?></td>
                                             <td><?= date("d/m/Y", strtotime($class['ngay_khai_giang'])) ?></td>
                                             <td><?= $class['dia_diem_hoc'] ?></td>
-                                            <td><?= $class['ma_khoa_hoc'] ?></td>
+                                            <?php $khoa_hoc = lay_khoa_hoc_theo_id($class['ma_khoa_hoc']) ?>
+                                            <td><?= $khoa_hoc['ten_khoa_hoc'] ?></td>
                                             <td><?= $class['ma_giang_vien'] ?></td>
                                             <td><?= $class['so_cho'] ?></td>
                                             <td>

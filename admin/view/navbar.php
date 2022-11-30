@@ -18,6 +18,12 @@
                         </div>
                     </div>
                 </li>
+
+                <li class="nav-item">
+                    <a href="index.php?url=danh_sach_hoa_don" class="nav-link nav-toggle"> <i data-feather="dollar-sign"></i>
+                        <span class="title">Hoá Đơn</span> <span class="arrow"></span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
                         <span class="title">Học Viên</span><span class="arrow"></span></a>
