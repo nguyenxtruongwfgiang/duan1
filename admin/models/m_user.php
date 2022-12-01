@@ -20,3 +20,10 @@ function lay_nguoi_dung_theo_id($ma_nguoi_dung)
     $nguoi_dung = getData($sql, FETCH_ONE);
     return $nguoi_dung;
 }
+
+function dem_hoc_vien()
+{
+    $sql = "SELECT COUNT(*) as total_student FROM nguoi_dung WHERE quyen = 0";
+    $tong_hoc_vien = getData($sql, FETCH_ONE);
+    return $tong_hoc_vien;
+}

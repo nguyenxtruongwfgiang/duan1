@@ -94,7 +94,7 @@ switch ($url) {
         thong_ke_khoa_hoc();
         break;
     case 'bieu_do_thong_ke':
-        bieu_do_thong_ke();
+        hien_thi_dashboard();
         break;
     case 'xoa_nguoi_dung':
         xoa_nguoi_dung();

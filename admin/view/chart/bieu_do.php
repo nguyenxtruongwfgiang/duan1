@@ -22,72 +22,45 @@
             <!-- start widget -->
             <div class="state-overview">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 col-12">
+                    <div class="col-xl-3 col-md-6 col-12" style="width: 33.3%;">
                         <div class="info-box bg-b-green">
                             <span class="info-box-icon push-bottom"><i data-feather="users"></i></span>
                             <div class="info-box-content">
-                                <span class="info-box-text">Total Students</span>
-                                <span class="info-box-number">450</span>
+                                <span class="info-box-text">Tổng Học Viên</span>
+                                <span class="info-box-number"><?= $tong_hoc_vien['total_student'] ?></span>
                                 <div class="progress">
-                                    <div class="progress-bar" style="width: 45%"></div>
+                                    <div class="progress-bar" style="width: 100%"></div>
                                 </div>
-                                <span class="progress-description">
-                                    45% Increase in 28 Days
-                                </span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
                         <!-- /.info-box -->
                     </div>
                     <!-- /.col -->
-                    <div class="col-xl-3 col-md-6 col-12">
-                        <div class="info-box bg-b-yellow">
-                            <span class="info-box-icon push-bottom"><i data-feather="user"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">New Students</span>
-                                <span class="info-box-number">155</span>
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 40%"></div>
-                                </div>
-                                <span class="progress-description">
-                                    40% Increase in 28 Days
-                                </span>
-                            </div>
-                            <!-- /.info-box-content -->
-                        </div>
-                        <!-- /.info-box -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-xl-3 col-md-6 col-12">
+                    <div class="col-xl-3 col-md-6 col-12" style="width: 33.3%;">
                         <div class="info-box bg-b-blue">
                             <span class="info-box-icon push-bottom"><i data-feather="book"></i></span>
                             <div class="info-box-content">
-                                <span class="info-box-text">Total Course</span>
-                                <span class="info-box-number">52</span>
+                                <span class="info-box-text">Tổng Khoá Học</span>
+                                <span class="info-box-number"><?= $tong_khoa_hoc['total_course'] ?></span>
                                 <div class="progress">
                                     <div class="progress-bar" style="width: 85%"></div>
                                 </div>
-                                <span class="progress-description">
-                                    85% Increase in 28 Days
-                                </span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
                         <!-- /.info-box -->
                     </div>
                     <!-- /.col -->
-                    <div class="col-xl-3 col-md-6 col-12">
+                    <div class="col-xl-3 col-md-6 col-12" style="width: 33.3%;">
                         <div class="info-box bg-b-pink">
                             <span class="info-box-icon push-bottom"><i class="material-icons">monetization_on</i></span>
                             <div class="info-box-content">
-                                <span class="info-box-text">Fees Collection</span>
-                                <span class="info-box-number">13,921</span><span>$</span>
+                                <span class="info-box-text">Tổng doanh thu tháng <?= $tong_doanh_thu['thang'] ?></span>
+                                <span class="info-box-number"><?= number_format($tong_doanh_thu['total']) ?></span><span> đ</span>
                                 <div class="progress">
                                     <div class="progress-bar" style="width: 50%"></div>
                                 </div>
-                                <span class="progress-description">
-                                    50% Increase in 28 Days
-                                </span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
@@ -116,7 +89,7 @@
                         ]);
 
                         var options = {
-                            title: 'Tổng khoá học: <?= count($danh_sach_thong_ke) ?>'
+                            title: ''
                         };
 
                         var chart = new google.visualization.PieChart(document.getElementById('myChart'));

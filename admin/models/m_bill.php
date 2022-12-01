@@ -2,7 +2,7 @@
 
 function danh_sach_hoa_don()
 {
-    $sql = "SELECT * FROM dang_ki";
+    $sql = "SELECT * FROM dang_ki ORDER BY ma_dk";
     $danh_sach_hoa_don = getData($sql, FETCH_ALL);
     return $danh_sach_hoa_don;
 }
@@ -22,6 +22,6 @@ function chi_tiet_hoa_don_theo_id($ma_dk)
 
 function sua_hoa_don_theo_id($ma_dk, $trang_thai)
 {
-    $sql = "UPDATE dang_ki SET trang_thai = '$trang_thai' WHERE $ma_dk = '$ma_dk'";
+    $sql = "UPDATE dang_ki SET trang_thai = '$trang_thai' WHERE ma_dk = '$ma_dk'";
     pdo_execute($sql);
 }

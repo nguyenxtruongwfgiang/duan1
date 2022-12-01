@@ -125,10 +125,25 @@ function m_edit_course()
 
 }
 
-function danh_sach_thong_ke(){
+function danh_sach_thong_ke()
+{
     $sql = "SELECT danhmuc.ma_danhmuc as ma_danhmuc, danhmuc.ten_danhmuc as ten_danhmuc, count(khoa_hoc.ma_khoa_hoc) as count_course, 
     min(khoa_hoc.hoc_phi) as min_price, max(khoa_hoc.hoc_phi) as max_price, avg(khoa_hoc.hoc_phi) as avg_price from khoa_hoc inner join danhmuc on danhmuc.ma_danhmuc = khoa_hoc.ma_loai
     group by danhmuc.ma_danhmuc order by danhmuc.ma_danhmuc desc";
     $danh_sach_thong_ke = getData($sql, FETCH_ALL);
     return $danh_sach_thong_ke;
+}
+
+function dem_khoa_hoc()
+{
+    $sql = "SELECT COUNT(*) as total_course FROM khoa_hoc";
+    $tong_khoa_hoc = getData($sql, FETCH_ONE);
+    return $tong_khoa_hoc;
+}
+
+function tong_doanh_thu_theo_thang()
+{
+    $sql = "SELECT MONTH(ngay_dk) as thang, sum(gia_tien) as total FROM dang_ki WHERE MONTH(ngay_dk) = MONTH(CURRENT_DATE())";
+    $tong_doanh_thu = getData($sql, FETCH_ONE);
+    return $tong_doanh_thu;
 }

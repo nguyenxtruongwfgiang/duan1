@@ -30,5 +30,8 @@ function form_sua_nguoi_dung()
 function hien_thi_dashboard()
 {
     $danh_sach_thong_ke = danh_sach_thong_ke();
+    $tong_hoc_vien = dem_hoc_vien();
+    $tong_khoa_hoc = dem_khoa_hoc();
+    $tong_doanh_thu = tong_doanh_thu_theo_thang();
     include('view/chart/bieu_do.php');
 }
