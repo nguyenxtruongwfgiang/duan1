@@ -143,7 +143,7 @@ function dem_khoa_hoc()
 
 function tong_doanh_thu_theo_thang()
 {
-    $sql = "SELECT MONTH(ngay_dk) as thang, sum(gia_tien) as total FROM dang_ki WHERE MONTH(ngay_dk) = MONTH(CURRENT_DATE())";
+    $sql = "SELECT MONTH(ngay_dk) as thang, sum(gia_tien) as total FROM dang_ki WHERE MONTH(ngay_dk) = MONTH(CURRENT_DATE()) AND trang_thai = 1";
     $tong_doanh_thu = getData($sql, FETCH_ONE);
     return $tong_doanh_thu;
 }

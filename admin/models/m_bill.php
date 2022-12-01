@@ -2,7 +2,7 @@
 
 function danh_sach_hoa_don()
 {
-    $sql = "SELECT * FROM dang_ki ORDER BY ma_dk";
+    $sql = "SELECT * FROM dang_ki ORDER BY ma_dk ASC";
     $danh_sach_hoa_don = getData($sql, FETCH_ALL);
     return $danh_sach_hoa_don;
 }
