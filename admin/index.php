@@ -1,4 +1,13 @@
 <?php
+
+?>
+<?php
+// session_start();
+// if(isset($_SESSION['user'])){
+//     if($_SESSION['user']['quyen'] == 1){
+//         include('view/login.php');
+//     }
+// }
 include('view/header.php');
 require('controllers/c_student.php');
 require('controllers/c_user.php');
@@ -101,6 +110,9 @@ switch ($url) {
         break;
     case 'form_sua_nguoi_dung':
         form_sua_nguoi_dung();
+        break;
+    case 'sua_nguoi_dung':
+        sua_nguoi_dung();
         break;
 
     case 'danh_sach_hoa_don':

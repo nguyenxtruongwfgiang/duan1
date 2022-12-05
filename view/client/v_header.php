@@ -71,7 +71,8 @@
                                 <?php if (isset($_SESSION['user'])) {
                                     extract($_SESSION['user'])
                                 ?>
-                                    <li>Xin Chào: <a href=""><?= $ho_ten ?></a></li>
+                                    <li>Xin Chào: <a href="index.php?url=user_detail&user_id=<?= $ma_nguoi_dung ?>"><?= $ho_ten ?></a></li>
+                                    <li><a href="index.php?url=user_detail&user_id=<?= $ma_nguoi_dung ?>"><img style="object-fit: cover;width: 35px;border-radius: 100%;height: 35px;" src="public/image/user/abcabc.jpg" alt=""></a></li>
                                     <?php if ($quyen == 1) { ?>
                                         <li><a href="admin" target="blank">Đến Trang Quản Trị</a></li>
                                     <?php } ?>

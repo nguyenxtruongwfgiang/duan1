@@ -59,7 +59,7 @@
                                             $lop = get_class_by_id($hoa_don['ma_lop']);
                                             $khoa_hoc = lay_khoa_hoc_theo_id($lop['ma_khoa_hoc']);
                                             ?>
-                                            <td class="center"><a href="index.php?url=chi_tiet_nguoi_dung"><?= $nguoi_dung['ho_ten'] ?></a></td>
+                                            <td class="center"><a href="index.php?url=form_sua_nguoi_dung&ma_nguoi_dung=<?= $nguoi_dung['ma_nguoi_dung'] ?>"><?= $nguoi_dung['ho_ten'] ?></a></td>
                                             <td class="center"><?= $lop['ten_lop'] ?></td>
                                             <td class="center"><?= $khoa_hoc['ten_khoa_hoc'] ?></td>
                                             <td class="center"><?= number_format($hoa_don['gia_tien']) ?> đ</td>

@@ -44,10 +44,10 @@
                                         <div class="col-md-5">
                                             <input type="hidden" name="hinh" value="<?= $nguoi_dung['hinh'] ?>">
                                             <input type="hidden" name="ma_nguoi_dung" value="<?= $nguoi_dung['ma_nguoi_dung'] ?>">
-                                            <input type="text" value="<?= $nguoi_dung['ho_ten'] ?>" name="firstname" data-required="1" placeholder="enter first name" class="form-control input-height" />
+                                            <input type="text" value="<?= $nguoi_dung['ho_ten'] ?>" name="ho_ten" data-required="1" placeholder="enter first name" class="form-control input-height" />
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Email
                                         </label>
@@ -60,18 +60,26 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+                                    <div class="form-group row">
+                                        <div class="profile-userpic" style="border-radius: 100%;">
+                                            <?php if (empty($nguoi_dung['hinh'])) { ?>
+                                                <img style="width: 100px; height: 100px; border-radius: 100%; object-fit: cover;" src="../public/image/user/blank-profile-picture-973460_640.webp" alt="" >
+                                            <?php } else { ?>
+                                                <img style="width: 100px; height: 100px; border-radius: 100%; object-fit: cover;" src="../public/image/user/<?= $nguoi_dung['hinh'] ?>" alt="">
+                                            <?php } ?>
+                                        </div>
+                                    </div>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Profile Picture
                                         </label>
                                         <div class="col-md-5">
-                                            <input type="file" class="default" multiple>
+                                            <input type="file" class="default" multiple name="hinh">
                                         </div>
                                     </div>
                                     <div class="form-actions">
                                         <div class="row">
                                             <div class="offset-md-3 col-md-9">
-                                                <button type="submit" name="sua_user" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">Submit</button>
+                                                <button type="submit" name="sua_nguoi_dung" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">Submit</button>
                                                 <button type="reset" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger">Cancel</button>
                                             </div>
                                         </div>

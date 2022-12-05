@@ -51,7 +51,7 @@
 
                             <div class="col-lg-6 p-t-20">
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="date" name="mau_nen">
+                                    <input class="mdl-textfield__input" type="text" name="mau_nen">
                                     <label class="mdl-textfield__label">Color Style</label>
                                 </div>
                             </div>
