@@ -10,10 +10,10 @@
                 <li class="sidebar-user-panel">
                     <div class="sidebar-user">
                         <div class="sidebar-user-picture">
-                            <img alt="image" src="view/admin/assets/img/dp.jpg">
+                            <img alt="image" src="../public/image/user/<?= $_SESSION['user']['hinh'] ?>">
                         </div>
                         <div class="sidebar-user-details">
-                            <div class="user-name">Sneha Patel</div>
+                            <div class="user-name"><?= $_SESSION['user']['ho_ten'] ?></div>
                             <div class="user-role">Administrator</div>
                         </div>
                     </div>

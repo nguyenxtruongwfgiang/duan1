@@ -73,7 +73,7 @@
                                                 <a href="index.php?url=form_sua_hoa_don&ma_hoa_don=<?= $hoa_don['ma_dk'] ?>" class="tblEditBtn">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
-                                                <a href="index.php?url=xoa_hoa_don&ma_hoa_don=<?= $hoa_don['ma_dk'] ?>" class="tblDelBtn">
+                                                <a onclick="return confirm('Bạn có muốn xoá không')" href="index.php?url=xoa_hoa_don&ma_hoa_don=<?= $hoa_don['ma_dk'] ?>" class="tblDelBtn">
                                                     <i class="fa fa-trash-o"></i>
                                                 </a>
                                             </td>

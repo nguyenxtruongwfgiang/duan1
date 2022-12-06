@@ -43,12 +43,21 @@ function show_limit_courses()
     return $danh_sach_khoa_hoc;
 }
 
-function get_courses_by_category_id($category_id, $course_id){
+function get_courses_by_category_id($category_id, $course_id)
+{
     $sql = "SELECT * FROM khoa_hoc WHERE ma_loai = '$category_id' AND ma_khoa_hoc != '$course_id' order by ma_khoa_hoc desc limit 3";
     $courses = getData($sql, FETCH_ALL);
     return $courses;
 }
 
-function return_slot(){
+function return_slot()
+{
     $sql = "SELECT";
+}
+
+function search_courses_by_name($keyword)
+{
+    $sql = "SELECT * FROM khoa_hoc WHERE ten_khoa_hoc LIKE '%$keyword%'";
+    $courses = getData($sql, FETCH_ALL);
+    return $courses;
 }

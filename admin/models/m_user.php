@@ -28,8 +28,15 @@ function dem_hoc_vien()
     return $tong_hoc_vien;
 }
 
-function cap_nhat_nguoi_dung($ma_nguoi_dung,$email, $ho_ten, $hinh)
+function cap_nhat_nguoi_dung($ma_nguoi_dung, $email, $ho_ten, $hinh)
 {
     $sql = "UPDATE nguoi_dung SET email = '$email', ho_ten = '$ho_ten', hinh = '$hinh' WHERE ma_nguoi_dung = '$ma_nguoi_dung'";
     pdo_execute($sql);
+}
+
+function check_user_admin($email, $password)
+{
+    $sql = "SELECT * FROM nguoi_dung WHERE email = '$email' AND password = '$password' AND quyen = 1";
+    $user = getData($sql, FETCH_ONE);
+    return $user;
 }

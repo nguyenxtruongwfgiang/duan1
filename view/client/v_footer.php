@@ -14,8 +14,8 @@
                                 <div class="widget-information">
                                     <ul class="information-list">
                                         <li><span>Add:</span>70-80 Upper St Norwich NR2</li>
-                                        <li><span>Call:</span><a href="tel:+011235641231">+01 123 5641 231</a></li>
-                                        <li><span>Email:</span><a href="mailto:info@edublink.com" target="_blank">info@edublink.com</a></li>
+                                        <li><span>Call:</span><a href="tel:+011235641231">+097 1631 797</a></li>
+                                        <li><span>Email:</span><a href="mailto:giang03yn@gmail.com" target="_blank">giang03yn@gmail.com</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -25,12 +25,12 @@
                                 <h4 class="widget-title">Online Platform</h4>
                                 <div class="inner">
                                     <ul class="footer-link link-hover">
-                                        <li><a href="about-one.html">About</a></li>
-                                        <li><a href="course-one.html">Courses</a></li>
-                                        <li><a href="team-one.html">Instructor</a></li>
-                                        <li><a href="event-grid.html">Events</a></li>
-                                        <li><a href="team-details.html">Instructor Profile</a></li>
-                                        <li><a href="purchase-guide.html">Purchase Guide</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Courses</a></li>
+                                        <li><a href="#">Instructor</a></li>
+                                        <li><a href="#">Events</a></li>
+                                        <li><a href="#">Instructor Profile</a></li>
+                                        <li><a href="#">Purchase Guide</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -40,12 +40,12 @@
                                 <h4 class="widget-title">Links</h4>
                                 <div class="inner">
                                     <ul class="footer-link link-hover">
-                                        <li><a href="contact-us.html">Contact Us</a></li>
-                                        <li><a href="gallery-grid.html">Gallery</a></li>
-                                        <li><a href="blog-standard.html">News & Articles</a></li>
-                                        <li><a href="faq.html">FAQ's</a></li>
-                                        <li><a href="my-account.html">Sign In/Registration</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li><a href="#">News & Articles</a></li>
+                                        <li><a href="#">FAQ's</a></li>
+                                        <li><a href="#">Sign In/Registration</a></li>
+                                        <li><a href="#">Coming Soon</a></li>
                                     </ul>
                                 </div>
                             </div>

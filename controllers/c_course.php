@@ -22,3 +22,12 @@ function course_detail()
         include('view/client/course_detail.php');
     }
 }
+
+function search_courses()
+{
+    if (isset($_POST['search'])) {
+        $keyword = $_POST['keyword'];
+    }
+    $courses = search_courses_by_name($keyword);
+    include('view/client/all_courses.php');
+}

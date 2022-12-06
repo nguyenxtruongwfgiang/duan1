@@ -76,7 +76,7 @@
                                                 <a href="index.php?url=edit_class_form&class_id=<?= $class['ma_lop'] ?>" class="tblEditBtn">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
-                                                <a class="tblDelBtn" href="index.php?url=delete_class&class_id=<?= $class['ma_lop'] ?>">
+                                                <a onclick="return confirm('Bạn có muốn xoá không')" class="tblDelBtn" href="index.php?url=delete_class&class_id=<?= $class['ma_lop'] ?>">
                                                     <i class="fa fa-trash-o"></i>
                                                 </a>
                                             </td>

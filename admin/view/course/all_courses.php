@@ -101,7 +101,7 @@
                                                 <a href="index.php?url=form_sua_khoa_hoc&course_id=<?= $khoa_hoc['ma_khoa_hoc'] ?>" class="tblEditBtn">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
-                                                <a href="index.php?url=xoa_khoa_hoc&course_id=<?= $khoa_hoc['ma_khoa_hoc'] ?>" class="tblDelBtn">
+                                                <a onclick="return confirm('Bạn có muốn xoá không')" href="index.php?url=xoa_khoa_hoc&course_id=<?= $khoa_hoc['ma_khoa_hoc'] ?>" class="tblDelBtn">
                                                     <i class="fa fa-trash-o"></i>
                                                 </a>
                                             </td>

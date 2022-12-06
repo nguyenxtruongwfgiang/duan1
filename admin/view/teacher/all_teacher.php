@@ -82,7 +82,7 @@
                                                                     <a href="index.php?url=form_sua_giang_vien&teacher_id=<?= $giang_vien['ma_giang_vien'] ?>" class="tblEditBtn">
                                                                         <i class="fa fa-pencil"></i>
                                                                     </a>
-                                                                    <a href="index.php?url=xoa_giang_vien&teacher_id=<?= $giang_vien['ma_giang_vien'] ?>" class="tblDelBtn">
+                                                                    <a onclick="return confirm('Bạn có muốn xoá không')" href="index.php?url=xoa_giang_vien&teacher_id=<?= $giang_vien['ma_giang_vien'] ?>" class="tblDelBtn">
                                                                         <i class="fa fa-trash-o"></i>
                                                                     </a>
                                                                 </td>

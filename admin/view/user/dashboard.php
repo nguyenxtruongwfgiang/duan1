@@ -75,7 +75,7 @@
                                                                     <a href="index.php?url=form_sua_nguoi_dung&ma_nguoi_dung=<?= $user['ma_nguoi_dung'] ?>" class="tblEditBtn">
                                                                         <i class="fa fa-pencil"></i>
                                                                     </a>
-                                                                    <a class="tblDelBtn" href="index.php?url=xoa_nguoi_dung&ma_nguoi_dung=<?= $user['ma_nguoi_dung'] ?>">
+                                                                    <a onclick="return confirm('Bạn có muốn xoá không')" class="tblDelBtn" href="index.php?url=xoa_nguoi_dung&ma_nguoi_dung=<?= $user['ma_nguoi_dung'] ?>">
                                                                         <i class="fa fa-trash-o"></i>
                                                                     </a>
                                                                 </td>

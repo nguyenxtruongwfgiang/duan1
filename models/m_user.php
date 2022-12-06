@@ -5,3 +5,10 @@ function insert_account($email, $fullname, $password)
     // var_dump($sql);
     pdo_execute($sql);
 }
+
+function check_exist_email($email)
+{
+    $sql = "SELECT * FROM nguoi_dung WHERE email = '$email'";
+    $email = getData($sql, FETCH_ONE);
+    return $email;
+}

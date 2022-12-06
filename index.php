@@ -47,7 +47,7 @@ switch ($url) {
         include('./view/client/login.php');
         break;
     case 'logout':
-        session_unset();
+        unset($_SESSION['user']);
         echo "<script>
             window.location.href='index.php'
         </script>";
@@ -57,6 +57,10 @@ switch ($url) {
         break;
     case 'complete_order':
         complete_order();
+        break;
+
+    case 'search_courses':
+        search_courses();
         break;
 }
 include('view/client/v_footer.php');

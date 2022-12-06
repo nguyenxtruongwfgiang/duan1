@@ -19,6 +19,16 @@
                             <input type="password" name="password" id="password" placeholder="Password">
                             <span class="password-show" id="togglePassword"><i class="icon-76"></i></span>
                         </div>
+                        <div class="form-group">
+                            <label for="log-password">Xác Nhận Mật Khẩu*</label>
+                            <input type="password" name="confirm_password" id="confirmPassword" placeholder="Password">
+                            <span class="password-show" id="togglePassword"><i class="icon-76"></i></span>
+                        </div>
+                        <?php if (isset($thongbao)) { ?>
+                            <div class="form-group">
+                                <label style="color: red;" for=""><?= $thongbao ?></label>
+                            </div>
+                        <?php } ?>
                         <div class="form-group chekbox-area">
                             <div class="edu-form-check">
                                 <input type="checkbox" id="terms-condition">
@@ -34,11 +44,13 @@
             <script>
                 const togglePassword = document.querySelector("#togglePassword");
                 const password = document.querySelector("#password");
+                const confirmPassword = document.querySelector("#confirmPassword");
 
                 togglePassword.addEventListener("click", function() {
                     // toggle the type attribute
                     const type = password.getAttribute("type") === "password" ? "text" : "password";
                     password.setAttribute("type", type);
+                    confirmPassword.setAttribute("type", type);
 
                     // toggle the icon
                     // this.classList.toggle("bi-eye");

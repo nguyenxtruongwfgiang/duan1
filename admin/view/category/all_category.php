@@ -72,7 +72,7 @@
                                                 <a href="index.php?url=form_sua_danhmuc&category_id=<?= $danh_muc['ma_danhmuc'] ?>" class="tblEditBtn">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
-                                                <a href="index.php?url=xoa_danhmuc&category_id=<?= $danh_muc['ma_danhmuc'] ?>" class="tblDelBtn">
+                                                <a onclick="return confirm('Bạn có muốn xoá không')" href="index.php?url=xoa_danhmuc&category_id=<?= $danh_muc['ma_danhmuc'] ?>" class="tblDelBtn">
                                                     <i class="fa fa-trash-o"></i>
                                                 </a>
                                             </td>
