@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="banner-content">
-                    <h1 class="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">Trải Nghiệm <span class="color-secondary">2500+</span> <br>Khoá Học Tốt Nhất Từ EduBlink</h1>
+                    <h1 class="title" data-sal-delay="100" data-sal="slide-up" data-sal-duration="1000">Trải Nghiệm <span class="color-secondary"><?= $count_course['count'] ?>+</span> <br>Khoá Học Tốt Nhất Từ EduBlink</h1>
                     <!-- <p data-sal-delay="200" data-sal="slide-up" data-sal-duration="1000">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.</p> -->
                     <div class="banner-btn" data-sal-delay="400" data-sal="slide-up" data-sal-duration="1000">
                         <a href="course-one.html" class="edu-btn">Tìm khoá học <i class="icon-4"></i></a>
@@ -28,7 +28,7 @@
                                     <img src="view/assets/images/banner/author-1.png" alt="Images">
                                 </div>
                                 <div class="content">
-                                    <span>200+</span> Giảng Viên
+                                    <span><?= $count_teacher['count'] ?>+</span> Giảng Viên
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                     <img class="svgInject" src="view/assets/images/animated-svg-icons/online-class.svg" alt="animated icon">
                 </div>
                 <div class="content">
-                    <h5 class="title"><span>3020</span> Khoá Học Online</h5>
+                    <h5 class="title"><span><?= $count_course['count'] ?></span> Khoá Học Online</h5>
                 </div>
             </div>
             <div class="features-box features-style-2 edublink-svg-animate">
@@ -97,7 +97,7 @@
                     <img class="svgInject" src="view/assets/images/animated-svg-icons/user.svg" alt="animated icon">
                 </div>
                 <div class="content">
-                    <h5 class="title"><span>6000</span>Học Viên</h5>
+                    <h5 class="title"><span><?= $count_student['count'] ?></span>Học Viên</h5>
                 </div>
             </div>
         </div>
@@ -353,7 +353,6 @@
                                 <div class="course-price"><?= number_format($khoa_hoc['hoc_phi']) ?>đ</div>
                                 <ul class="course-meta">
                                     <li><i class="icon-24"></i><?= $khoa_hoc['thoi_gian'] ?> Tuần</li>
-                                    <li><i class="icon-25"></i>28 Students</li>
                                 </ul>
                             </div>
                         </div>
@@ -408,29 +407,15 @@
                     <div class="counterup-box counterup-box-1">
                         <div class="edu-counterup counterup-style-2">
                             <h2 class="counter-item count-number primary-color">
-                                <span class="odometer" data-odometer-final="45.2">.</span><span>K</span>
+                                <span class="odometer" data-odometer-final="<?= $count_student['count'] ?>"></span><span></span>
                             </h2>
-                            <h6 class="title">Student Enrolled</h6>
+                            <h6 class="title">Học Viên</h6>
                         </div>
                         <div class="edu-counterup counterup-style-2">
                             <h2 class="counter-item count-number secondary-color">
-                                <span class="odometer" data-odometer-final="32.4">.</span><span>K</span>
+                                <span class="odometer" data-odometer-final="<?= $count_course['count'] ?>"></span><span></span>
                             </h2>
-                            <h6 class="title">Class Completed</h6>
-                        </div>
-                    </div>
-                    <div class="counterup-box counterup-box-2">
-                        <div class="edu-counterup counterup-style-2">
-                            <h2 class="counter-item count-number extra05-color">
-                                <span class="odometer" data-odometer-final="354">.</span><span>+</span>
-                            </h2>
-                            <h6 class="title">Top Instructors</h6>
-                        </div>
-                        <div class="edu-counterup counterup-style-2">
-                            <h2 class="counter-item count-number extra02-color">
-                                <span class="odometer" data-odometer-final="99.9">.</span><span>%</span>
-                            </h2>
-                            <h6 class="title">Satisfaction Rate</h6>
+                            <h6 class="title">Khoá Học</h6>
                         </div>
                     </div>
                     <ul class="shape-group">

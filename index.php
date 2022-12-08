@@ -28,21 +28,22 @@ switch ($url) {
         enroll();
         // include('./admin/view/admin/dark/sign_up.php');
         break;
-        break;
     case 'login':
+        $thongbao = '';
         if (isset($_POST['dang_nhap'])) {
             $email = $_POST['email'];
             $pass = $_POST['pass'];
             $checkuser = checkuser($email, $pass);
-            if (is_array($checkuser))
+            if (is_array($checkuser)) {
                 $_SESSION['user'] = $checkuser;
-            //$thongbao="Bạn đã đăng nhập thành công  !";
-            //header('location: index.php');
-            echo "<script>
+                //$thongbao="Bạn đã đăng nhập thành công  !";
+                //header('location: index.php');
+                echo "<script>
             window.location.href='index.php';
         </script>";
-        } else {
-            $thongbao = "Tài khoản không tồn tại!";
+            } else {
+                $thongbao = "* Tài khoản hoặc mật khẩu không đúng!";
+            }
         }
         include('./view/client/login.php');
         break;

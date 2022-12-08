@@ -15,6 +15,11 @@
                             <input type="password" name="pass" id="password" placeholder="Password">
                             <span class="password-show" id="togglePassword"><i class="icon-76"></i></span>
                         </div>
+                        <?php if (isset($thongbao)) { ?>
+                            <div class="form-group">
+                                <label style="color: red;" for=""><?= $thongbao ?></label>
+                            </div>
+                        <?php } ?>
                         <div class="form-group chekbox-area">
                             <div class="edu-form-check">
                                 <input type="checkbox" id="remember-me">

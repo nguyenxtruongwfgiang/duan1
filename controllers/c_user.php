@@ -16,6 +16,8 @@ function enroll()
             $thongbao = '* Không được bỏ trống họ tên';
         } elseif ($email == '') {
             $thongbao = '* Không được bỏ trống email';
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $thongbao = "* Email không đúng định dạng";
         } elseif (strlen($pass_word) < 8) {
             $thongbao = '* Mật khẩu phải lớn hơn 8 ký tự';
         } elseif (is_array($check_email)) {

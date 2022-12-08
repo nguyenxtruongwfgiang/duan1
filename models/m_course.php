@@ -61,3 +61,15 @@ function search_courses_by_name($keyword)
     $courses = getData($sql, FETCH_ALL);
     return $courses;
 }
+
+function count_course(){
+    $sql = "SELECT COUNT(*) as count FROM khoa_hoc";
+    $count_course = getData($sql, FETCH_ONE);
+    return $count_course;
+}
+
+function count_teacher(){
+    $sql = "SELECT COUNT(*) as count FROM giang_vien";
+    $count_teacher = getData($sql, FETCH_ONE);
+    return $count_teacher;
+}

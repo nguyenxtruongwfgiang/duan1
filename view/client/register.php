@@ -12,7 +12,7 @@
                         </div>
                         <div class="form-group">
                             <label for="log-email">Email*</label>
-                            <input type="email" name="email" id="log-email" placeholder="Email or username">
+                            <input type="text" name="email" id="log-email" placeholder="Email or username">
                         </div>
                         <div class="form-group">
                             <label for="log-password">Mật Khẩu*</label>

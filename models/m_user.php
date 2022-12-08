@@ -12,3 +12,9 @@ function check_exist_email($email)
     $email = getData($sql, FETCH_ONE);
     return $email;
 }
+
+function count_student(){
+    $sql = "SELECT COUNT(*) as count FROM nguoi_dung WHERE quyen = 0";
+    $count_student = getData($sql, FETCH_ONE);
+    return $count_student;
+}
