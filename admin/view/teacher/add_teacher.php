@@ -47,6 +47,11 @@
                                             <input type="text" name="ten_giang_vien" data-required="1" placeholder="enter teacher name" class="form-control input-height" />
                                         </div>
                                     </div>
+                                    <?php if (isset($error['name'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;"><?= $error['name'] ?></div>
+                                        </div>
+                                    <?php endif; ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Thông Tin Giảng Viên
                                             <span class="required"> * </span>
@@ -55,13 +60,23 @@
                                             <textarea name="thong_tin_gv" placeholder="teacher information" class="form-control-textarea" rows="5"></textarea>
                                         </div>
                                     </div>
+                                    <?php if (isset($error['detail'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;"><?= $error['detail'] ?></div>
+                                        </div>
+                                    <?php endif; ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Ảnh
                                         </label>
                                         <div class="col-md-5">
-                                            <input type="file" class="default" multiple name="hinh" >
+                                            <input type="file" class="default" multiple name="hinh">
                                         </div>
                                     </div>
+                                    <?php if (isset($error['type_error'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;"><?= $error['type_error'] ?></div>
+                                        </div>
+                                    <?php endif; ?>
                                     <div class="form-actions">
                                         <div class="row">
                                             <div class="offset-md-3 col-md-9">

@@ -42,25 +42,12 @@
                                     <input class="mdl-textfield__input" type="text" id="txtTitle" name="ten_danhmuc">
                                     <label class="mdl-textfield__label">Tên Danh Mục</label>
                                 </div>
-                                <?php
-                                    if(isset($msg)){
-                                        echo '<h3>'.$msg.'</h3>';
-                                    }
-                                ?>
                             </div>
-
-                            <div class="col-lg-6 p-t-20">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" name="mau_nen">
-                                    <label class="mdl-textfield__label">Color Style</label>
+                            <?php if (isset($error)) { ?>
+                                <div class="mdl-textfield mdl-js-textfield mdl-js-textfield--floating-label txt-full-width">
+                                    <label for="" style="color: red; font-size: 12px"><?= $error ?></label>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 p-t-20">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="txtPrice" name="icon">
-                                    <label class="mdl-textfield__label">Icon Style</label>
-                                </div>
-                            </div>
+                            <?php } ?>
 
                             <div class="col-lg-12 p-t-20 text-center">
                                 <button type="submit" name="them_danhmuc" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">Thêm Danh Mục</button>

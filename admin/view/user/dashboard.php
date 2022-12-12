@@ -69,7 +69,7 @@
                                                                 <td><a href="mailto:<?= $user['email'] ?>">
                                                                         <?= $user['email'] ?> </a></td>
                                                                 <td class="patient-img">
-                                                                    <img src="../public/image/user/<?= $user['hinh'] ?>" alt="">
+                                                                    <img style="width: 90px; height: 90px; border-radius: 100%; object-fit: cover;" src="../public/image/user/<?= $user['hinh'] ?>" alt="">
                                                                 </td>
                                                                 <td>
                                                                     <a href="index.php?url=form_sua_nguoi_dung&ma_nguoi_dung=<?= $user['ma_nguoi_dung'] ?>" class="tblEditBtn">

@@ -11,6 +11,16 @@
         input[type=number] {
             -moz-appearance: textfield;
         }
+
+        .alert {
+            position: relative;
+            left: -190px;
+            justify-content: center;
+            box-shadow: none;
+            margin: 0px !important;
+            margin-top: 0px !important;
+            top: -15px;
+        }
     </style>
 </head>
 <div class="page-container">
@@ -62,6 +72,13 @@
                                             <input type="text" name="ten_lop" data-required="1" placeholder="tên lớp" class="form-control input-height" />
                                         </div>
                                     </div>
+                                    <?php if (isset($error['class_name'])) { ?>
+                                        <div class="form-group row alert">
+                                            <label for="" class="control-label col-md-3">
+                                                <span class="required"><?= $error['class_name'] ?></span>
+                                            </label>
+                                        </div>
+                                    <?php } ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Ca Học
                                             <span class="required"> * </span>
@@ -70,6 +87,13 @@
                                             <input type="text" name="ca_hoc" data-required="1" placeholder="ca học" class="form-control input-height" />
                                         </div>
                                     </div>
+                                    <?php if (isset($error['shift'])) { ?>
+                                        <div class="form-group row alert">
+                                            <label for="" class="control-label col-md-3">
+                                                <span class="required"><?= $error['shift'] ?></span>
+                                            </label>
+                                        </div>
+                                    <?php } ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Ngày Khai Giảng
                                             <span class="required"> * </span>
@@ -78,18 +102,17 @@
                                             <div class="input-append date">
                                                 <div id="dateIcon" class="input-group datePicker">
                                                     <input type="date" class="formDatePicker form-control" name="ngay_khai_giang" placeholder="ngày khai giảng" data-input>
-                                                    <!-- <span class="dateBtn">
-                                                        <a class="input-button" title="toggle" data-toggle>
-                                                            <i class="icon-calendar"></i>
-                                                        </a>
-                                                        <a class="input-button" title="clear" data-clear>
-                                                            <i class="icon-close"></i>
-                                                        </a>
-                                                    </span> -->
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php if (isset($error['date'])) { ?>
+                                        <div class="form-group row alert">
+                                            <label for="" class="control-label col-md-3">
+                                                <span class="required"><?= $error['date'] ?></span>
+                                            </label>
+                                        </div>
+                                    <?php } ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Địa Điểm Học
                                             <span class="required"> * </span>
@@ -98,6 +121,13 @@
                                             <input type="text" name="dia_diem_hoc" data-required="1" placeholder="địa điểm học" class="form-control input-height" />
                                         </div>
                                     </div>
+                                    <?php if (isset($error['location'])) { ?>
+                                        <div class="form-group row alert">
+                                            <label for="" class="control-label col-md-3">
+                                                <span class="required"><?= $error['location'] ?></span>
+                                            </label>
+                                        </div>
+                                    <?php } ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Khoá Học
                                             <span class="required"> * </span>
@@ -111,6 +141,13 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <?php if (isset($error['course_id'])) { ?>
+                                        <div class="form-group row alert">
+                                            <label for="" class="control-label col-md-3">
+                                                <span class="required"><?= $error['course_id'] ?></span>
+                                            </label>
+                                        </div>
+                                    <?php } ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Giảng Viên
                                             <span class="required"> * </span>
@@ -124,6 +161,13 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <?php if (isset($error['teacher_id'])) { ?>
+                                        <div class="form-group row alert">
+                                            <label for="" class="control-label col-md-3">
+                                                <span class="required"><?= $error['teacher_id'] ?></span>
+                                            </label>
+                                        </div>
+                                    <?php } ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Số Chỗ
                                             <span class="required"> * </span>
@@ -132,6 +176,13 @@
                                             <input name="so_cho" type="number" placeholder="Slot" class="form-control input-height" min="1" />
                                         </div>
                                     </div>
+                                    <?php if (isset($error['slot'])) { ?>
+                                        <div class="form-group row alert">
+                                            <label for="" class="control-label col-md-3">
+                                                <span class="required"><?= $error['slot'] ?></span>
+                                            </label>
+                                        </div>
+                                    <?php } ?>
                                     <div class="form-actions">
                                         <div class="row">
                                             <div class="offset-md-3 col-md-9">

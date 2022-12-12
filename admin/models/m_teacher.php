@@ -14,45 +14,11 @@ function get_teacher_by_id($teacher_id)
     return $teacher;
 }
 
-function add_teacher()
+function add_teacher($ten_giang_vien, $hinh, $thong_tin_gv)
 {
-    $error = [];
-    if (isset($_POST["them_gv"])) {
-
-        $ten_giang_vien = $_POST['ten_giang_vien'];
-        $hinh = $_FILES['hinh']['name'];
-        $thong_tin_gv = $_POST['thong_tin_gv'];
-
-        if (isset($_FILES["hinh"])) {
-            $target_dir = "../public/image/teacher/";
-
-            // $file_name = $_FILES["hinh"]["name"];
-            $target_file = $target_dir . $hinh;
-
-            $file_type = pathinfo($target_file, PATHINFO_EXTENSION);
-            $arr_type = ["jpg", "png", "jpeg", "gif"];
-            $allowUpload = true;
-
-            if (!in_array($file_type, $arr_type)) {
-                $error["type_error"] = "Không được upload file khác định dạng jpg, jpeg, png, gif";
-                $allowUpload = false;
-            }
-
-            if ($allowUpload == true) {
-                move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file);
-            }
-        }
-
-        if (!$error) {
-            $sql = "INSERT INTO giang_vien (ten_giang_vien, hinh, thong_tin_gv)
+        $sql = "INSERT INTO giang_vien (ten_giang_vien, hinh, thong_tin_gv)
             VALUES ('$ten_giang_vien', '$hinh', '$thong_tin_gv')";
-            pdo_execute($sql);
-            echo "<script>
-            window.location.href='index.php?url=danh_sach_giang_vien';
-                </script>";
-            $thong_bao = 'Thêm thành công';
-        }
-    }
+        pdo_execute($sql);
     // if (isset($thong_bao))  echo $thong_bao;
 }
 

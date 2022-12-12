@@ -40,7 +40,7 @@ function get_user_by_user_id($user_id)
 
 function return_count_order($ma_lop)
 {
-    $sql = "SELECT COUNT(*) as ordered FROM dang_ki WHERE ma_lop = '$ma_lop'";
+    $sql = "SELECT COUNT(*) as ordered FROM dang_ki WHERE ma_lop = '$ma_lop' AND trang_thai = 1";
     $slot_ordered = getData($sql, FETCH_ONE);
     return $slot_ordered;
 }

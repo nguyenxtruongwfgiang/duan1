@@ -63,6 +63,14 @@
                                             <input type="text" name="ten_khoa_hoc" placeholder="enter course name" class="form-control input-height" />
                                         </div>
                                     </div>
+                                    <?php if (isset($error['name'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;">
+                                                <?= $error['name'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Thời Gian
                                             <span class="required"> * </span>
@@ -71,6 +79,15 @@
                                             <input type="number" name="thoi_gian" placeholder="enter course time" class="form-control input-height" />
                                         </div>
                                     </div>
+
+                                    <?php if (isset($error['time'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;">
+                                                <?= $error['time'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Thông Tin Khoá Học
                                             <span class="required"> * </span>
@@ -80,6 +97,15 @@
                                         </div>
                                     </div>
 
+                                    <?php if (isset($error['detail'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;">
+                                                <?= $error['detail'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+
+
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Kế Hoạch Học Tập
                                             <span class="required"> * </span>
@@ -88,6 +114,15 @@
                                             <textarea name="ke_hoach_hoc_tap" placeholder="course schedule" class="form-control-textarea" rows="5"></textarea>
                                         </div>
                                     </div>
+
+                                    <?php if (isset($error['schedule'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;">
+                                                <?= $error['schedule'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Học Phí
                                             <span class="required"> * </span>
@@ -96,6 +131,15 @@
                                             <input type="number" name="hoc_phi" placeholder="Course Price" class="form-control input-height" />
                                         </div>
                                     </div>
+
+                                    <?php if (isset($error['price'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;">
+                                                <?= $error['price'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Danh Mục
                                             <span class="required"> * </span>
@@ -109,6 +153,13 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <?php if (isset($error['category'])) : ?>
+                                        <div class="form-group row" style="justify-content: center; position: relative; left: -40px;">
+                                            <div class="col-md-5" style="color: red;">
+                                                <?= $error['category'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Mức Độ
                                             <span class="required"> * </span>
@@ -123,12 +174,18 @@
                                         <div class="col-md-5">
                                             <input type="file" class="default" multiple name="hinh">
                                         </div>
-                                        <?php if(isset($error)): ?>
-                                        <div class="invalid-feedback">
-                                            <?= $error ?>
-                                        </div>
-                                        <?php endif; ?>
                                     </div>
+
+
+                                    <?php if (isset($error['image'])) : ?>
+                                        <div class="form-group row" style="justify-content: center;position: relative;left: -40px;">
+                                            <div class="col-md-5" style="color: red;">
+                                                <?= $error['image'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+
+
                                     <div class="form-actions">
                                         <div class="row">
                                             <div class="offset-md-3 col-md-9">

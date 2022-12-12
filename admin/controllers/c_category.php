@@ -9,17 +9,21 @@ function hien_thi_ds_danhMuc()
 
 function them_moi_danh_muc()
 {
+    $error = '';
     if (isset($_POST['them_danhmuc'])) {
         $ten_danhmuc = $_POST['ten_danhmuc'];
-        $mau_nen = $_POST['mau_nen'];
-        $icon = $_POST['icon'];
 
-        them_danh_muc($ten_danhmuc, $mau_nen, $icon);
-        // sql query for insert data
+        if (empty($ten_danhmuc)) {
+            $error = '* không được bỏ trống tên danh mục';
+        } else {
+            them_danh_muc($ten_danhmuc);
+            // sql query for insert data
 
-        echo "<script>
+            echo "<script>
             window.location.href='index.php?url=danh_sach_danh_muc';
         </script>";
+        }
+
         // if (pdo_execute($sql)) {
 
         //     header("Location:index.php?url=danh_sach_danh_muc");
@@ -51,14 +55,12 @@ function form_sua_danhmuc()
 
 function sua_danh_muc()
 {
-    if (isset($_POST['them_danhmuc'])) {
+    if (isset($_POST['sua_danh_muc'])) {
         $ma_danhmuc = $_POST['ma_danhmuc'];
         $ten_danhmuc = $_POST['ten_danhmuc'];
-        $mau_nen = $_POST['mau_nen'];
-        $icon = $_POST['icon'];
 
         // sql query for insert data
-        sua_danhmuc($ma_danhmuc, $ten_danhmuc, $mau_nen, $icon);
+        sua_danhmuc($ma_danhmuc, $ten_danhmuc);
         echo "<script>
             window.location.href='index.php?url=danh_sach_danh_muc';
         </script>";

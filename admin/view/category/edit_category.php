@@ -48,23 +48,14 @@
                                 // }
                                 ?>
                             </div>
-                                    <input type="hidden" name="ma_danhmuc" value="<?= $danhmuc['ma_danhmuc'] ?>">
-
-                            <div class="col-lg-6 p-t-20">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="date" name="mau_nen" value="<?= $danhmuc['mau_nen'] ?>">
-                                    <label class="mdl-textfield__label">Color Style</label>
+                            <?php if (isset($error)) { ?>
+                                <div class="mdl-textfield mdl-js-textfield mdl-js-textfield--floating-label txt-full-width">
+                                    <label for="" style="color: red; font-size: 12px"><?= $error ?></label>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 p-t-20">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="txtPrice" name="icon" value="<?= $danhmuc['icon'] ?>">
-                                    <label class="mdl-textfield__label">Icon Style</label>
-                                </div>
-                            </div>
-
+                            <?php } ?>
+                            <input type="hidden" name="ma_danhmuc" value="<?= $danhmuc['ma_danhmuc'] ?>">
                             <div class="col-lg-12 p-t-20 text-center">
-                                <button type="submit" name="them_danhmuc" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">Sửa Danh Mục</button>
+                                <button type="submit" name="sua_danh_muc" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">Sửa Danh Mục</button>
                                 <button type="reset" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger">Reset</button>
                             </div>
                         </form>
