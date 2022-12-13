@@ -25,7 +25,7 @@ function add_class_form()
         if (empty($ca_hoc)) {
             $error['shift'] = '* không được bỏ trống ca học';
         }
-        if (strlen(strtotime($ngay_khai_giang))) {
+        if (empty($ngay_khai_giang)) {
             $error['date'] = '* chọn ngày khai giảng';
         }
         if (empty($dia_diem_hoc)) {

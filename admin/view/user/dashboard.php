@@ -22,12 +22,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="tabbable-line">
-                        <ul class="nav customtab nav-tabs" role="tablist">
-                            <li class="nav-item"><a href="#tab1" class="nav-link active" data-bs-toggle="tab">List
-                                    View</a></li>
-                            <li class="nav-item"><a href="#tab2" class="nav-link" data-bs-toggle="tab">Grid
-                                    View</a></li>
-                        </ul>
                         <div class="tab-content">
                             <div class="tab-pane active fontawesome-demo" id="tab1">
                                 <div class="row">
@@ -69,7 +63,11 @@
                                                                 <td><a href="mailto:<?= $user['email'] ?>">
                                                                         <?= $user['email'] ?> </a></td>
                                                                 <td class="patient-img">
-                                                                    <img style="width: 90px; height: 90px; border-radius: 100%; object-fit: cover;" src="../public/image/user/<?= $user['hinh'] ?>" alt="">
+                                                                    <?php if (empty($user['hinh'])) { ?>
+                                                                        <img style="width: 90px; height: 90px; border-radius: 100%; object-fit: cover;" src="../public/image/user/blank-profile-picture-973460_640.webp" alt="">
+                                                                    <?php } else { ?>
+                                                                        <img style="width: 90px; height: 90px; border-radius: 100%; object-fit: cover;" src="../public/image/user/<?= $user['hinh'] ?>" alt="">
+                                                                    <?php } ?>
                                                                 </td>
                                                                 <td>
                                                                     <a href="index.php?url=form_sua_nguoi_dung&ma_nguoi_dung=<?= $user['ma_nguoi_dung'] ?>" class="tblEditBtn">
@@ -86,33 +84,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab2">
-                                <div class="row">
-                                    <?php foreach ($users as $user) : ?>
-                                        <div class="col-md-4">
-                                            <div class="card card-box">
-                                                <div class="card-body no-padding ">
-                                                    <div class="doctor-profile">
-                                                        <img src="view/admin/assets/img/user/user10.jpg" class="doctor-pic" alt="">
-                                                        <div class="profile-usertitle">
-                                                            <div class="doctor-name">Pooja Patel </div>
-                                                            <div class="name-center"> Science </div>
-                                                        </div>
-                                                        <p>A-103, shyam gokul flats, Mahatma Road <br />Mumbai</p>
-                                                        <div>
-                                                            <p><i class="fa fa-phone"></i><a href="tel:(123)456-7890"> (123)456-7890</a></p>
-                                                        </div>
-                                                        <div class="profile-userbuttons">
-                                                            <a href="professor_profile.html" class="btn btn-circle deepPink-bgcolor btn-sm">Read
-                                                                More</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>

@@ -325,7 +325,7 @@
             <?php foreach ($danh_sach_khoa_hoc as $khoa_hoc) : ?>
                 <!-- Start Single Course  -->
                 <div class="col-md-6 col-xl-3" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="edu-course course-style-1 hover-button-bg-white">
+                    <div class="edu-course course-style-1 hover-button-bg-white" style="height: 430px;">
                         <div class="inner">
                             <div class="thumbnail">
                                 <a href="course-details.html">
@@ -341,14 +341,7 @@
                                     <a href="#"><?= $khoa_hoc['ten_khoa_hoc'] ?></a>
                                 </h6>
                                 <div class="course-rating">
-                                    <div class="rating">
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                    </div>
-                                    <span class="rating-count">(4.9 /8 Rating)</span>
+                                    
                                 </div>
                                 <div class="course-price"><?= number_format($khoa_hoc['hoc_phi']) ?>đ</div>
                                 <ul class="course-meta">

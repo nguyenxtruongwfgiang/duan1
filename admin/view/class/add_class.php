@@ -14,12 +14,13 @@
 
         .alert {
             position: relative;
-            left: -190px;
+            left: -145px;
             justify-content: center;
             box-shadow: none;
             margin: 0px !important;
             margin-top: 0px !important;
             top: -15px;
+            color: red;
         }
     </style>
 </head>
@@ -75,7 +76,7 @@
                                     <?php if (isset($error['class_name'])) { ?>
                                         <div class="form-group row alert">
                                             <label for="" class="control-label col-md-3">
-                                                <span class="required"><?= $error['class_name'] ?></span>
+                                                <?= $error['class_name'] ?>
                                             </label>
                                         </div>
                                     <?php } ?>
@@ -90,7 +91,7 @@
                                     <?php if (isset($error['shift'])) { ?>
                                         <div class="form-group row alert">
                                             <label for="" class="control-label col-md-3">
-                                                <span class="required"><?= $error['shift'] ?></span>
+                                                <?= $error['shift'] ?>
                                             </label>
                                         </div>
                                     <?php } ?>
@@ -109,7 +110,7 @@
                                     <?php if (isset($error['date'])) { ?>
                                         <div class="form-group row alert">
                                             <label for="" class="control-label col-md-3">
-                                                <span class="required"><?= $error['date'] ?></span>
+                                                <?= $error['date'] ?>
                                             </label>
                                         </div>
                                     <?php } ?>
@@ -124,7 +125,7 @@
                                     <?php if (isset($error['location'])) { ?>
                                         <div class="form-group row alert">
                                             <label for="" class="control-label col-md-3">
-                                                <span class="required"><?= $error['location'] ?></span>
+                                                <?= $error['location'] ?>
                                             </label>
                                         </div>
                                     <?php } ?>
@@ -144,7 +145,7 @@
                                     <?php if (isset($error['course_id'])) { ?>
                                         <div class="form-group row alert">
                                             <label for="" class="control-label col-md-3">
-                                                <span class="required"><?= $error['course_id'] ?></span>
+                                                <?= $error['course_id'] ?>
                                             </label>
                                         </div>
                                     <?php } ?>
@@ -164,7 +165,7 @@
                                     <?php if (isset($error['teacher_id'])) { ?>
                                         <div class="form-group row alert">
                                             <label for="" class="control-label col-md-3">
-                                                <span class="required"><?= $error['teacher_id'] ?></span>
+                                                <?= $error['teacher_id'] ?>
                                             </label>
                                         </div>
                                     <?php } ?>
@@ -179,7 +180,7 @@
                                     <?php if (isset($error['slot'])) { ?>
                                         <div class="form-group row alert">
                                             <label for="" class="control-label col-md-3">
-                                                <span class="required"><?= $error['slot'] ?></span>
+                                                <?= $error['slot'] ?>
                                             </label>
                                         </div>
                                     <?php } ?>
