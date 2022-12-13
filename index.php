@@ -39,7 +39,7 @@ switch ($url) {
                 //$thongbao="Bạn đã đăng nhập thành công  !";
                 //header('location: index.php');
                 echo "<script>
-            window.location.href='index.php';
+                    history.go(-2)
         </script>";
             } else {
                 $thongbao = "* Tài khoản hoặc mật khẩu không đúng!";
@@ -50,7 +50,7 @@ switch ($url) {
     case 'logout':
         unset($_SESSION['user']);
         echo "<script>
-            window.location.href='index.php'
+            history.go(-1)
         </script>";
         break;
     case 'order':
@@ -62,6 +62,14 @@ switch ($url) {
 
     case 'search_courses':
         search_courses();
+        break;
+
+    case 'post_comment':
+        post_comment();
+        break;
+
+    case 'contact':
+        include('view/client/contact.php');
         break;
 }
 include('view/client/v_footer.php');

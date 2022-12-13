@@ -97,6 +97,13 @@
                     </ul>
                 </li>
                 <li class="nav-item">
+                    <a href="index.php?url=danh_sach_binh_luan" class="nav-link nav-toggle">
+                        <i data-feather="mail"></i>
+                        <span class="title">Bình Luận</span>
+                        <span class="arrow"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="#" class="nav-link nav-toggle"> <i data-feather="briefcase"></i>
                         <span class="title">Lớp</span> <span class="arrow"></span>
                     </a>

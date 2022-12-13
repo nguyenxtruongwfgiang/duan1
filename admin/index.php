@@ -15,6 +15,7 @@ if (isset($_SESSION['user'])) {
         require('controllers/c_teacher.php');
         require('controllers/c_class.php');
         require('controllers/c_bill.php');
+        require('controllers/c_comment.php');
 
 
         $url = isset($_GET['url']) ? $_GET['url'] : '/';
@@ -133,6 +134,13 @@ if (isset($_SESSION['user'])) {
                 echo "<script>
                     window.location.href='index.php'
                 </script>";
+                break;
+            case 'danh_sach_binh_luan':
+                hien_thi_danh_sach_binh_luan();
+                break;
+
+            case 'xoa_binh_luan':
+                xoa_binh_luan();
                 break;
         }
 

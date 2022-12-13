@@ -1,5 +1,5 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<div class="page-conttainer">
+<div class="page-container">
     <?php include('view/navbar.php'); ?>
     <!-- start page content -->
 

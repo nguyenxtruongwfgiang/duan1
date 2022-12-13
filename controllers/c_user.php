@@ -1,5 +1,6 @@
 <?php
 require('models/m_user.php');
+require('models/m_comment.php');
 
 function enroll()
 {
@@ -36,4 +37,26 @@ function enroll()
 function login_form()
 {
     include('view/client/login.php');
+}
+
+function post_comment(){
+    $aler = '';
+    if(isset($_POST['post_comment'])){
+        $noi_dung = $_POST['message'];
+        $ma_khoa_hoc = $_POST['ma_khoa_hoc'];
+        $ma_nguoi_dung = $_POST['ma_nguoi_dung'];
+        $ngay_binh_luan = date('Y-m-d', time());
+        if($noi_dung == ''){
+            $alert = '* vui lòng nhập bình luận';
+            echo '<script>
+                history.go(-1)
+            </script>';
+        }
+        else{
+            insert_comment($noi_dung, $ma_khoa_hoc, $ma_nguoi_dung, $ngay_binh_luan);
+            echo "<script>
+                history.go(-1)
+            </script>";
+        }
+    }
 }

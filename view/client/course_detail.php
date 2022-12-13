@@ -50,14 +50,10 @@
                 <div class="course-details-content">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="true">Overview</button>
+                            <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="true">Thông tin khoá học</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="instructor-tab" data-bs-toggle="tab" data-bs-target="#instructor" type="button" role="tab" aria-controls="instructor" aria-selected="false">Instructor</button>
-                        </li>
-
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false">Reviews</button>
+                            <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false">Bình luận</button>
                         </li>
                     </ul>
 
@@ -180,175 +176,53 @@
                         <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
                             <div class="course-tab-content">
                                 <div class="course-review">
-                                    <h3 class="heading-title">Course Rating</h3>
-                                    <p>5.00 average rating based on 7 rating</p>
-                                    <div class="row g-0 align-items-center">
-                                        <div class="col-sm-4">
-                                            <div class="rating-box">
-                                                <div class="rating-number">5.0</div>
-                                                <div class="rating">
-                                                    <i class="icon-23"></i>
-                                                    <i class="icon-23"></i>
-                                                    <i class="icon-23"></i>
-                                                    <i class="icon-23"></i>
-                                                    <i class="icon-23"></i>
-                                                </div>
-                                                <span>(7 Review)</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="review-wrapper">
-
-                                                <div class="single-progress-bar">
-                                                    <div class="rating-text">
-                                                        5 <i class="icon-23"></i>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                    <span class="rating-value">7</span>
-                                                </div>
-
-                                                <div class="single-progress-bar">
-                                                    <div class="rating-text">
-                                                        4 <i class="icon-23"></i>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                    <span class="rating-value">0</span>
-                                                </div>
-
-                                                <div class="single-progress-bar">
-                                                    <div class="rating-text">
-                                                        4 <i class="icon-23"></i>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                    <span class="rating-value">0</span>
-                                                </div>
-
-                                                <div class="single-progress-bar">
-                                                    <div class="rating-text">
-                                                        4 <i class="icon-23"></i>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                    <span class="rating-value">0</span>
-                                                </div>
-
-                                                <div class="single-progress-bar">
-                                                    <div class="rating-text">
-                                                        4 <i class="icon-23"></i>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                    <span class="rating-value">0</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <!-- Start Comment Area  -->
                                     <div class="comment-area">
-                                        <h3 class="heading-title">Reviews</h3>
+                                        <h3 class="heading-title">Bình luận</h3>
                                         <div class="comment-list-wrapper">
                                             <!-- Start Single Comment  -->
-                                            <div class="comment">
-                                                <div class="thumbnail">
-                                                    <img src="view/assets/images/blog/comment-01.jpg" alt="Comment Images">
-                                                </div>
-                                                <div class="comment-content">
-                                                    <div class="rating">
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
+                                            <?php foreach ($comments as $comment) : ?>
+                                                <?php $user = get_user_by_user_id($comment['ma_nguoi_dung']) ?>
+                                                <div class="comment">
+                                                    <?php if (empty($user['hinh'])) { ?>
+                                                        <div class="thumbnail">
+                                                            <img src="public/image/user/blank-profile-picture-973460_640.webp" alt="">
+                                                        </div>
+                                                    <?php } else { ?>
+                                                        <div class="thumbnail">
+                                                            <img src="public/image/user/<?= $user['hinh'] ?>" alt="Comment Images">
+                                                        </div>
+                                                    <?php } ?>
+                                                    <div class="comment-content">
+                                                        <h5 class="title"><?= $user['ho_ten'] ?></h5>
+                                                        <span class="date"><?= date('d/m/Y', strtotime($comment['ngay_binh_luan'])) ?></span>
+                                                        <p><?= $comment['noi_dung'] ?></p>
                                                     </div>
-                                                    <h5 class="title">Haley Bennet</h5>
-                                                    <span class="date">Oct 10, 2021</span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                                 </div>
-                                            </div>
-                                            <!-- End Single Comment  -->
-                                            <!-- Start Single Comment  -->
-                                            <div class="comment">
-                                                <div class="thumbnail">
-                                                    <img src="view/assets/images/blog/comment-02.jpg" alt="Comment Images">
-                                                </div>
-                                                <div class="comment-content">
-                                                    <div class="rating">
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                    </div>
-                                                    <h5 class="title">Simon Baker</h5>
-                                                    <span class="date">Oct 10, 2021</span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                </div>
-                                            </div>
-                                            <!-- End Single Comment  -->
-                                            <!-- Start Single Comment  -->
-                                            <div class="comment">
-                                                <div class="thumbnail">
-                                                    <img src="view/assets/images/blog/comment-03.jpg" alt="Comment Images">
-                                                </div>
-                                                <div class="comment-content">
-                                                    <div class="rating">
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                        <i class="icon-23"></i>
-                                                    </div>
-                                                    <h6 class="title">Richard Gere</h6>
-                                                    <span class="date">Oct 10, 2021</span>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                </div>
-                                            </div>
+                                            <?php endforeach; ?>
                                             <!-- End Single Comment  -->
                                         </div>
                                     </div>
-                                    <!-- End Comment Area  -->
-                                    <div class="comment-form-area">
-                                        <h3 class="heading-title">Write a Review</h3>
-                                        <div class="rating-icon">
-                                            <h6 class="title">Rating Here</h6>
-                                            <div class="rating">
-                                                <i class="icon-23"></i>
-                                                <i class="icon-23"></i>
-                                                <i class="icon-23"></i>
-                                                <i class="icon-23"></i>
-                                                <i class="icon-23"></i>
-                                            </div>
+                                    <?php if (isset($_SESSION['user'])) { ?>
+                                        <!-- End Comment Area  -->
+                                        <div class="comment-form-area">
+                                            <h3 class="heading-title">Viết Bình Luận</h3>
+                                            <form class="comment-form" action="index.php?url=post_comment" method="POST">
+                                                <div class="row g-5">
+                                                    <div class="form-group col-12">
+                                                        <textarea name="message" id="comm-message" cols="30" rows="5" placeholder="viết bình luận tại đây"></textarea>
+                                                    </div>
+                                                    <div class="form-group col-12">
+                                                        <input type="hidden" name="ma_khoa_hoc" value="<?= $course['ma_khoa_hoc'] ?>">
+                                                        <input type="hidden" name="ma_nguoi_dung" value="<?= $_SESSION['user']['ma_nguoi_dung'] ?>">
+                                                        <button name="post_comment" type="submit" class="edu-btn submit-btn">Gửi Bình Luận <i class="icon-4"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <form class="comment-form">
-                                            <div class="row g-5">
-                                                <div class="form-group col-lg-6">
-                                                    <input type="text" name="comm-title" id="comm-title" placeholder="Review Title">
-                                                </div>
-                                                <div class="form-group col-lg-6">
-                                                    <input type="text" name="comm-name" id="comm-name" placeholder="Reviewer name">
-                                                </div>
-                                                <div class="form-group col-12">
-                                                    <input type="email" name="comm-email" id="comm-email" placeholder="Reviewer email">
-                                                </div>
-                                                <div class="form-group col-12">
-                                                    <textarea name="comm-message" id="comm-message" cols="30" rows="5" placeholder="Review summary"></textarea>
-                                                </div>
-                                                <div class="form-group col-12">
-                                                    <button type="submit" class="edu-btn submit-btn">Submit Review <i class="icon-4"></i></button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                    <?php } else { ?>
+                                        <span class="color-secondary">đăng nhập để bình luận</span>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -427,16 +301,6 @@
                                 <h5 class="title">
                                     <a href="index.php?url=course_detail&course_id=<?= $course['ma_khoa_hoc'] ?>"><?= $course['ten_khoa_hoc'] ?></a>
                                 </h5>
-                                <div class="course-rating">
-                                    <div class="rating">
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                        <i class="icon-23"></i>
-                                    </div>
-                                    <span class="rating-count">(5)</span>
-                                </div>
                                 <p style="text-overflow: ellipsis; width: 100%; white-space: nowrap;overflow: hidden"><?= $course['thong_tin_khoa_hoc'] ?></p>
                                 <ul class="course-meta">
                                     <li><i class="icon-24"></i><?= $course['thoi_gian'] ?> tuần</li>
