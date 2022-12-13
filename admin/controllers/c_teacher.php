@@ -28,6 +28,8 @@ function them_giang_vien()
 
             $file_name = $_FILES["hinh"]["name"];
             $target_file = $target_dir . $file_name;
+            // ../public/image/teacher/abcabc.jpg
+            // .jpg, png, jpeg, gif
 
             $file_type = pathinfo($file_name, PATHINFO_EXTENSION);
             // $arr_type = ["jpg", "png", "jpeg", "gif"];
