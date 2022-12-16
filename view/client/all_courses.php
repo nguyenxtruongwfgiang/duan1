@@ -57,8 +57,7 @@
                                 </div>
                                 <p><?= $course['thong_tin_khoa_hoc'] ?></p>
                                 <ul class="course-meta">
-                                    <li><i class="icon-24"></i><?= $course['thoi_gian'] ?></li>
-                                    <li><i class="icon-25"></i>20 Students</li>
+                                    <li><i class="icon-24"></i><?= $course['thoi_gian'] ?> tuần</li>
                                 </ul>
                             </div>
                         </div>
